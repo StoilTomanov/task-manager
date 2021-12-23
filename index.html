@@ -5,10 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./static/home.css">
+    <link rel="stylesheet" href="./static/sign-in.css">
+    <title>Task Manager 2022</title>
 </head>
 
 <body>
+
+    <main id="main"></main>
+
+    <!-- Home View -->
+    <section id="homeView">
+        <div>
+            <h1 id="header">
+                Task Manager 2022
+            </h1>
+        </div>
+        <button id="sign-up">Sign up</button>
+        <div id="sign-case">
+            <p id="para">Already have an account? <a href="#" id="sign-in">Sign in</a></p>
+        </div>
+    </section>
+
+    <!-- Login View -->
+    <section id="loginView">
+        <h3>Sign In</h3>
+        <form id="login-form" @submit=${loginForm}>
+            <div class="container">
+                <h1>Login</h1>
+                <label for="username">Username</label>
+                <input id="username" placeholder="Enter Username" name="username" type="text">
+                <label for="email">Email</label>
+                <input id="email" placeholder="Enter Email" name="email" type="text">
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Enter Password" name="password">
+                <input type="submit" class="registerbtn button" value="Login">
+                <div class="container signin">
+                    <p>Dont have an account?<a href="/register">Sign up</a>.</p>
+                </div>
+            </div>
+        </form>
+    </section>
 
 </body>
 

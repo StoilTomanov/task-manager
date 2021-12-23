@@ -1,0 +1,36 @@
+@font-face {
+    font-family: ext-font;
+    src: url(/fonts/Exo-Light.ttf);
+}
+
+html,
+body {
+    font-family: ext-font, 'Maiandra GD', 'Courier New', Courier, monospace;
+}
+
+#homeView {
+    background-color: rgb(190, 214, 241);
+    text-align: center;
+}
+
+#header {
+    background-color: rgb(92, 151, 190);
+    text-align: center;
+}
+
+button#sign-up {
+    margin-top: 100px;
+}
+
+#sign-in {
+    text-decoration: none;
+    transition: 0.2s;
+    color: rgb(58, 58, 218);
+}
+
+#sign-in:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 110%;
+    transition: 0.2s;
+}
