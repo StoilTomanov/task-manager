@@ -6,6 +6,7 @@
 html,
 body {
     font-family: ext-font, 'Maiandra GD', 'Courier New', Courier, monospace;
+    background-color: rgb(190, 214, 241);
 }
 
 #homeView {
@@ -18,17 +19,17 @@ body {
     text-align: center;
 }
 
-button#sign-up {
+button#sign-in {
     margin-top: 100px;
 }
 
-#sign-in {
+#sign-up {
     text-decoration: none;
     transition: 0.2s;
     color: rgb(58, 58, 218);
 }
 
-#sign-in:hover {
+#sign-up:hover {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 110%;

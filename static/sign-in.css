@@ -1,0 +1,32 @@
+#loginView {
+    background-color: rgb(190, 214, 241);
+    text-align: center;
+}
+
+.form input {
+    background-color: rgb(215, 218, 205);
+    display: block;
+    margin-left: 32%;
+}
+
+.form select#privilege {
+    display: block;
+    margin-left: 42%;
+}
+
+@media screen and (min-width: 430px) {
+    .form input {
+        background-color: rgb(215, 218, 205);
+        display: block;
+        margin-left: 43%;
+    }
+    .form select#privilege {
+        display: block;
+        margin-left: 47%;
+    }
+}
+
+#containerForm {
+    border: 1px solid;
+    border-radius: 15px;
+}

@@ -21,30 +21,57 @@
                 Task Manager 2022
             </h1>
         </div>
-        <button id="sign-up">Sign up</button>
+        <button id="sign-in">Sign in</button>
         <div id="sign-case">
-            <p id="para">Already have an account? <a href="#" id="sign-in">Sign in</a></p>
+            <p id="para">Don't have an account? <a href="#" id="sign-up">Sign up</a></p>
         </div>
     </section>
 
     <!-- Login View -->
     <section id="loginView">
         <h3>Sign In</h3>
-        <form id="login-form" @submit=${loginForm}>
-            <div class="container">
-                <h1>Login</h1>
-                <label for="username">Username</label>
-                <input id="username" placeholder="Enter Username" name="username" type="text">
-                <label for="email">Email</label>
-                <input id="email" placeholder="Enter Email" name="email" type="text">
-                <label for="password">Password</label>
-                <input id="password" type="password" placeholder="Enter Password" name="password">
-                <input type="submit" class="registerbtn button" value="Login">
-                <div class="container signin">
-                    <p>Dont have an account?<a href="/register">Sign up</a>.</p>
-                </div>
+        <div id="containerForm">
+            <div id="formType">
+                <button id="orgBtn" class="button">Organization</button>
+                <button id="indBtn" class="button">Individual</button>
             </div>
-        </form>
+            <form id="login-form-individual">
+                <div class="form">
+                    <label for="username">Username</label>
+                    <input id="username" placeholder="Enter Username" name="username" type="text">
+                    <label for="email">Email</label>
+                    <input id="email" placeholder="Enter Email" name="email" type="text">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" placeholder="Enter Password" name="password">
+                    <input type="submit" class="registerbtn button" value="Sign in">
+                    <div class="container signin">
+                        <p>Dont have an account?<a href="#">Sign up</a>.</p>
+                    </div>
+                </div>
+            </form>
+            <form id="login-form-organization">
+                <div class="form">
+                    <label for="username">Organization name</label>
+                    <input id="username" placeholder="Enter Username" name="username" type="text">
+                    <label for="organization-id">Organization ID</label>
+                    <input id="organization-id" placeholder="Enter Organization ID" name="organization-id" type="text">
+                    <label for="privilege">Privilege</label>
+                    <select name="privilege" id="privilege">
+                        <option value="admin">Admin</option>
+                        <option value="regular">Regular</option>
+                    </select>
+                    <label for="email">Email</label>
+                    <input id="email" placeholder="Enter Email" name="email" type="text">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" placeholder="Enter Password" name="password">
+                    <input type="submit" class="registerbtn button" value="Sign in">
+                    <div class="container signin">
+                        <p>Dont have an account?<a href="#">Sign up</a>.</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+
     </section>
 
 </body>
