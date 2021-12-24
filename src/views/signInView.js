@@ -2,7 +2,7 @@ import { body, main } from '../app.js';
 import { html, render } from '../lib/lit-html.js';
 
 export function showSignIn() {
-    body.style.backgroundColor = 'white';
+    body.style.background = 'rgb(255, 255, 255)';
     const template = html `
     <section id="loginView">
         <h3>Sign In</h3>
