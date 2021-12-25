@@ -1,19 +1,25 @@
 .img#dashboard {
     width: 20px;
-    margin-top: 15px;
+    margin-top: 15%;
 }
 
 .img#team {
     width: 20px;
-    margin-top: 15px;
+    margin-top: 15%;
 }
 
 .img#settings {
     width: 20px;
-    margin-top: 15px;
 }
 
 li a {
     text-align: left;
     text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+nav {
+    background-color: rgb(70, 159, 236);
+    display: inline;
+    float: left;
 }
