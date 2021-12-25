@@ -22,7 +22,7 @@ export function showSignUp() {
                     <input type="text" name="name" id="name" placeholder="Enter team id...">
                     <label for="name">Password</label>
                     <input type="password" name="name" id="name" placeholder="Enter password...">
-                    <input type="submit" value="Sign In" class="submitBtn">
+                    <input type="submit" value="Sign Up" class="submitBtn">
                 </form>
             </div>
             <div class="form">
@@ -31,7 +31,7 @@ export function showSignUp() {
                     <input type="text" name="name" id="name" placeholder="Enter username...">
                     <label for="name">Password</label>
                     <input type="password" name="name" id="name" placeholder="Enter password...">
-                    <input type="submit" value="Sign In" class="submitBtn">
+                    <input type="submit" value="Sign Up" class="submitBtn">
                 </form>
             </div>
         </div>

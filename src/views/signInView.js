@@ -36,7 +36,7 @@ export function showSignIn() {
             </div>
         </div>
         <div class="container-signup">
-            <p>Dont have an account?<a href="/signup"> Sign up</a></p>
+            <p>Don't have an account?<a href="/signup"> Sign up</a></p>
         </div>
     </section>
     `

@@ -5,6 +5,7 @@
 #registerView h3 {
     font-size: 200%;
     margin-bottom: 80px;
+    margin-top: -10px;
 }
 
 button.type {
