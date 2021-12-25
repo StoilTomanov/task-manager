@@ -1,8 +1,8 @@
-#loginView {
+#registerView {
     text-align: center;
 }
 
-#loginView h3 {
+#registerView h3 {
     font-size: 200%;
     margin-bottom: 80px;
 }
@@ -36,18 +36,18 @@ button:hover {
     cursor: pointer;
 }
 
-.container-signup p {
+.container-signin p {
     font-size: 100%;
     margin-top: 50px;
 }
 
-.container-signup p a {
+.container-signin p a {
     text-decoration: none;
     transition: 0.2s;
     color: rgb(38, 149, 247);
 }
 
-.container-signup p a:hover {
+.container-signin p a:hover {
     cursor: pointer;
     transition: 0.2s;
     font-size: 110%;
@@ -131,17 +131,6 @@ button.backBtn {
     margin-left: -90%;
     font-family: ext-font, 'Maiandra GD', 'Courier New', Courier, monospace;
     font-size: 60px;
-    transition: 0.2s;
-}
-
-button.backBtn:hover {
-    background: none;
-    border: 0px;
-    color: rgb(6, 175, 20);
-    margin-left: -90%;
-    font-family: ext-font, 'Maiandra GD', 'Courier New', Courier, monospace;
-    font-size: 63px;
-    transition: 0.2s;
 }
 
 @media screen and (max-width: 600px) {
@@ -175,7 +164,7 @@ button.backBtn:hover {
         margin-left: -80%;
         font-size: 50px;
     }
-    .container-signup p {
+    .container-signin p {
         margin-top: 50px;
     }
 }

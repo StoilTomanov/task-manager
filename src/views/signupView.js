@@ -3,15 +3,15 @@ import { onBack } from '../controllers/backBtn.js';
 import { onTypeChoice } from '../controllers/typeBtn.js';
 import { html, render } from '../lib/lit-html.js';
 
-export function showSignIn() {
+export function showSignUp() {
     body.style.background = 'rgb(255, 255, 255)';
     const template = html `
-    <section id="loginView">
+    <section id="registerView">
         <button class="backBtn" @click=${onBack}>&#8592</button>
-        <h3>Sign In</h3>
+        <h3>Sign Up</h3>
         <div @click=${onTypeChoice}>
-            <button class="type"  id="team">Team</button>
-            <button class="type"  id="individual">Individual</button>
+            <button class="type" id="team">Team</button>
+            <button class="type" id="individual">Individual</button>
         </div>
         <div class="container-forms">
             <div class="form">
@@ -35,8 +35,8 @@ export function showSignIn() {
                 </form>
             </div>
         </div>
-        <div class="container-signup">
-            <p>Dont have an account?<a href="/signup"> Sign up</a></p>
+        <div class="container-signin">
+            <p>Already have an accout?<a href="/signin"> Sign in</a></p>
         </div>
     </section>
     `

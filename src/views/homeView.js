@@ -13,7 +13,7 @@ export function showHome() {
         </div>
         <div id="sign-case">
             <a id="sign-in" href="/signin">Sign in</a>
-            <p id="para">Don't have an account? <a href="#" id="sign-up">Sign up</a></p>
+            <p id="para">Don't have an account? <a href="/signup" id="sign-up">Sign up</a></p>
         </div>
     </section>
     `
