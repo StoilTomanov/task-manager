@@ -5,8 +5,8 @@
 
 html {
     font-family: ext-font, 'Maiandra GD', 'Courier New', Courier, monospace;
-    /* background: rgb(34, 199, 246);
-    background: radial-gradient(circle, rgba(34, 199, 246, 1) 0%, rgba(41, 170, 238, 1) 34%, rgb(4, 110, 197) 72%, rgba(36, 110, 192, 1) 100%); */
+    background: rgb(34, 199, 246);
+    background: radial-gradient(circle, rgba(34, 199, 246, 1) 0%, rgba(41, 170, 238, 1) 34%, rgb(4, 110, 197) 72%, rgba(36, 110, 192, 1) 100%);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,13 +23,13 @@ html {
 }
 
 img#logo {
-    height: 400px;
+    height: 300px;
 }
 
 #sign-case a#sign-in {
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0);
-    font-size: 130%;
+    font-size: 110%;
     border: 1px solid;
     border-width: 2px;
     border-radius: 6px;
@@ -39,6 +39,7 @@ img#logo {
 }
 
 #sign-case a#sign-in:hover {
+    font-size: 120%;
     border: 2px solid;
     border-color: rgb(136, 255, 125);
     transition: 0.2s;
@@ -54,6 +55,7 @@ img#logo {
 
 #sign-up:hover {
     text-decoration: none;
+    font-size: 120%;
     color: rgb(134, 255, 123);
     transition: 0.2s;
 }
