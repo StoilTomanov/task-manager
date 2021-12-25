@@ -1,0 +1,19 @@
+.img#dashboard {
+    width: 20px;
+    margin-top: 15px;
+}
+
+.img#team {
+    width: 20px;
+    margin-top: 15px;
+}
+
+.img#settings {
+    width: 20px;
+    margin-top: 15px;
+}
+
+li a {
+    text-align: left;
+    text-decoration: none;
+}
