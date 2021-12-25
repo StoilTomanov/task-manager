@@ -1,7 +1,8 @@
-import { main } from '../app.js';
+import { body, main } from '../app.js';
 import { html, render } from '../lib/lit-html.js';
 
 export function showHome() {
+    body.style.background = '';
     const template = html `
     <section id="homeView">
         <img id="logo" src="./img/Logos_1.png">

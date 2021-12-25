@@ -39,7 +39,7 @@
                 <mxCell id="DdzQnaDb4cV9D-8ngHLk-33" value="Sign in" style="whiteSpace=wrap;html=1;strokeColor=#1A1A1A;" parent="avsixJgxy6TRpV4ocl6h-1" vertex="1">
                     <mxGeometry x="345.5" y="348" width="77" height="31" as="geometry"/>
                 </mxCell>
-                <mxCell id="pysNtUjXfseh8_R5VoDF-0" value="Organization name" style="whiteSpace=wrap;html=1;strokeColor=#1A1A1A;" parent="avsixJgxy6TRpV4ocl6h-1" vertex="1">
+                <mxCell id="pysNtUjXfseh8_R5VoDF-0" value="Company name" style="whiteSpace=wrap;html=1;strokeColor=#1A1A1A;" parent="avsixJgxy6TRpV4ocl6h-1" vertex="1">
                     <mxGeometry x="260" y="127" width="248" height="24" as="geometry"/>
                 </mxCell>
                 <mxCell id="pysNtUjXfseh8_R5VoDF-1" value="Organization ID" style="whiteSpace=wrap;html=1;strokeColor=#1A1A1A;" parent="avsixJgxy6TRpV4ocl6h-1" vertex="1">

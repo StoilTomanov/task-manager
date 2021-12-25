@@ -2,11 +2,79 @@
     text-align: center;
 }
 
+#loginView h3 {
+    font-size: 200%;
+}
+
 button.type {
     display: inline-block;
     font-size: 100%;
+    border-color: rgb(180, 220, 255);
     border-radius: 0px;
-    width: 200px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    background-color: rgb(180, 220, 255);
+    width: 22%;
+    border-style: outset;
     height: 50px;
     margin: -3px
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.container-signin p {
+    font-size: 100%;
+}
+
+.container-forms label {
+    display: block;
+    font-size: 110%;
+    margin-top: 5px;
+}
+
+.container-forms input {
+    margin-top: 2px;
+    font-size: 110%;
+    width: 100%;
+    text-align: center;
+    border: 1px solid;
+    border-color: rgb(59, 158, 245);
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.container-forms select {
+    margin-top: 2px;
+    background: none;
+    font-size: 110%;
+    border: 1px solid;
+    border-radius: 4px;
+    border-color: rgb(59, 158, 245);
+    text-align: center;
+    margin-bottom: 5px;
+    width: 102.5%;
+}
+
+.form {
+    margin-top: 2px;
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 3px;
+    border-color: rgb(180, 220, 255);
+    width: 43.6%;
+    box-shadow: 4px 4px 15px -4px;
+}
+
+#org-form {
+    display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#ind-form {
+    display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }

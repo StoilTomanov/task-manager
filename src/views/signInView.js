@@ -8,7 +8,7 @@ export function showSignIn() {
         <h3>Sign In</h3>
         <button class="type">Organization</button>
         <button class="type">Individual</button>
-        <div class="container signin">
+        <div class="container-signin">
             <p>Dont have an account?<a href="#">Sign up</a>.</p>
         </div>
     </section>

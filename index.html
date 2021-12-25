@@ -19,14 +19,43 @@
     </main>
 
     <!-- Login View -->
-    <!-- <section id="loginView">
+    <section id="loginView">
         <h3>Sign In</h3>
-        <button class="type">Organization</button>
+        <button class="type">Company</button>
         <button class="type">Individual</button>
-        <div class="container signin">
+        <div class="container-forms">
+            <div class="form">
+                <form id="org-form">
+                    <label for="name">Company name</label>
+                    <input type="text" name="name" id="name">
+                    <label for="name">Company ID</label>
+                    <input type="text" name="name" id="name">
+                    <label for="profile-type">Access type</label>
+                    <select name="type" id="access-type">
+                        <option value="none"></option>
+                        <option value="admin">Admin</option>
+                        <option value="regular">Regular</option>
+                    </select>
+                    <label for="name">Username</label>
+                    <input type="text" name="name" id="name">
+                    <label for="name">Password</label>
+                    <input type="password" name="name" id="name">
+                </form>
+            </div>
+            <hr>
+            <div class="form">
+                <form id="ind-form">
+                    <label for="name">Username</label>
+                    <input type="text" name="name" id="name">
+                    <label for="name">Password</label>
+                    <input type="password" name="name" id="name">
+                </form>
+            </div>
+        </div>
+        <div class="container-signin">
             <p>Dont have an account?<a href="#">Sign up</a>.</p>
         </div>
-    </section> -->
+    </section>
 
 </body>
 
