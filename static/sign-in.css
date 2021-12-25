@@ -58,13 +58,14 @@ button:hover {
 }
 
 .form {
-    margin-top: 2px;
-    display: inline-block;
-    border: 2px solid;
-    border-radius: 3px;
-    border-color: rgb(180, 220, 255);
-    width: 43.6%;
+    margin-left: 28%;
+    margin-top: 1px;
+    display: block;
+    width: 43.7%;
     box-shadow: 4px 4px 15px -4px;
+    border: 1px solid;
+    border-color: rgba(255, 255, 255, 0);
+    border-radius: 5px;
 }
 
 #org-form {
@@ -74,7 +75,8 @@ button:hover {
 }
 
 #ind-form {
-    display: inline-block;
+    /* display: inline-block; */
+    display: none;
     margin-top: 40px;
     margin-bottom: 40px;
 }
