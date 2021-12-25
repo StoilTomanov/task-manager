@@ -5,7 +5,6 @@ import { showSignIn } from './views/signInView.js';
 export const main = document.getElementById('main');
 export const body = document.querySelector('html');
 
-page.redirect('/');
 page('/', showHome);
 page('/signin', showSignIn);
 

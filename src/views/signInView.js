@@ -18,14 +18,6 @@ export function showSignIn() {
                     <input type="text" name="name" id="name">
                     <label for="name">Team ID</label>
                     <input type="text" name="name" id="name">
-                    <label for="profile-type">Access type</label>
-                    <select name="type" id="access-type">
-                        <option value="none"></option>
-                        <option value="admin">Admin</option>
-                        <option value="regular">Regular</option>
-                    </select>
-                    <label for="name">Username</label>
-                    <input type="text" name="name" id="name">
                     <label for="name">Password</label>
                     <input type="password" name="name" id="name">
                 </form>

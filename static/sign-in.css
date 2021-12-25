@@ -20,12 +20,15 @@ button.type {
 }
 
 button.type#team {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(180, 220, 255);
+    font-family: ext-font, 'Maiandra GD', 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 
 button.type#individual {
-    background-color: rgb(180, 220, 255);
+    background-color: rgb(255, 255, 255);
     border-color: rgb(180, 220, 255);
+    font-family: ext-font, 'Maiandra GD', 'Courier New', Courier, monospace;
 }
 
 button:hover {
@@ -35,6 +38,19 @@ button:hover {
 .container-signin p {
     font-size: 100%;
     margin-top: 50px;
+}
+
+.container-signin p a {
+    text-decoration: none;
+    transition: 0.2s;
+    color: rgb(38, 149, 247);
+}
+
+.container-signin p a:hover {
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 110%;
+    color: rgb(34, 187, 20);
 }
 
 .container-forms label {
