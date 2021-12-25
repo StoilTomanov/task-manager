@@ -1,4 +1,5 @@
 import { body, main } from '../app.js';
+import { onTypeChoice } from '../controllers/typeBtn.js';
 import { html, render } from '../lib/lit-html.js';
 
 export function showSignIn() {
@@ -6,11 +7,13 @@ export function showSignIn() {
     const template = html `
     <section id="loginView">
         <h3>Sign In</h3>
-        <button class="type">Team</button>
-        <button class="type">Individual</button>
+        <div @click=${onTypeChoice}>
+            <button class="type"  id="team">Team</button>
+            <button class="type"  id="individual">Individual</button>
+        </div>
         <div class="container-forms">
             <div class="form">
-                <form id="org-form">
+                <form id="team-form">
                     <label for="name">Team name</label>
                     <input type="text" name="name" id="name">
                     <label for="name">Team ID</label>

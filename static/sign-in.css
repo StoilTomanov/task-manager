@@ -4,20 +4,28 @@
 
 #loginView h3 {
     font-size: 200%;
+    margin-bottom: 80px;
 }
 
 button.type {
     display: inline-block;
     font-size: 100%;
-    border-color: rgb(180, 220, 255);
     border-radius: 0px;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
-    background-color: rgb(180, 220, 255);
-    width: 22%;
+    width: 22.2%;
     border-style: outset;
     height: 50px;
     margin: -3px
+}
+
+button.type#team {
+    background-color: rgb(255, 255, 255);
+}
+
+button.type#individual {
+    background-color: rgb(180, 220, 255);
+    border-color: rgb(180, 220, 255);
 }
 
 button:hover {
@@ -26,6 +34,7 @@ button:hover {
 
 .container-signin p {
     font-size: 100%;
+    margin-top: 50px;
 }
 
 .container-forms label {
@@ -68,7 +77,8 @@ button:hover {
     border-radius: 5px;
 }
 
-#org-form {
+#team-form {
+    /* display: none; */
     display: inline-block;
     margin-top: 40px;
     margin-bottom: 40px;
