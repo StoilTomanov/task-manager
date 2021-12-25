@@ -13,7 +13,7 @@ button.type {
     border-radius: 0px;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
-    width: 22.2%;
+    width: 22%;
     border-style: outset;
     height: 50px;
     margin: -3px
@@ -84,9 +84,9 @@ button:hover {
 
 .form {
     margin-left: 28%;
-    margin-top: 1px;
+    margin-top: 0px;
     display: block;
-    width: 43.7%;
+    width: 43.8%;
     box-shadow: 4px 4px 15px -4px;
     border: 1px solid;
     border-color: rgba(255, 255, 255, 0);
@@ -105,6 +105,22 @@ button:hover {
     display: none;
     margin-top: 40px;
     margin-bottom: 40px;
+}
+
+input.submitBtn {
+    margin-top: 50px;
+    width: 40%;
+    background-color: rgb(180, 220, 255);
+    border-color: rgb(255, 255, 255);
+}
+
+input.submitBtn:hover {
+    cursor: pointer;
+    background-color: rgb(91, 174, 247);
+}
+
+input.submitBtn:active {
+    background-color: rgb(131, 243, 178);
 }
 
 @media screen and (max-width: 600px) {

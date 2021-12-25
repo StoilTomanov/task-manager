@@ -15,19 +15,21 @@ export function showSignIn() {
             <div class="form">
                 <form id="team-form">
                     <label for="name">Team name</label>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" placeholder="Enter team name...">
                     <label for="name">Team ID</label>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" placeholder="Enter team id...">
                     <label for="name">Password</label>
-                    <input type="password" name="name" id="name">
+                    <input type="password" name="name" id="name" placeholder="Enter password...">
+                    <input type="submit" value="Sign In" class="submitBtn">
                 </form>
             </div>
             <div class="form">
                 <form id="ind-form">
                     <label for="name">Username</label>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" placeholder="Enter username...">
                     <label for="name">Password</label>
-                    <input type="password" name="name" id="name">
+                    <input type="password" name="name" id="name" placeholder="Enter password...">
+                    <input type="submit" value="Sign In" class="submitBtn">
                 </form>
             </div>
         </div>
