@@ -21,6 +21,7 @@ button.type {
 
 button.type#team {
     background-color: rgb(180, 220, 255);
+    border-color: rgb(180, 220, 255);
     font-family: ext-font, 'Maiandra GD', 'Courier New', Courier, monospace;
     font-weight: bold;
 }
