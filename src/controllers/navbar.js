@@ -14,33 +14,23 @@ export function toggleNav(ev) {
 
         li.forEach(item => item.style.display = 'inline-block');
         if (window.screen.width < 600) {
-            // navigation.style.transition = '0.5s';
             navigation.style.width = '35%';
             main.style.marginLeft = "0%";
         } else if (window.screen.width > 600) {
-            // navigation.style.transition = '0.5s';
-            navigation.style.width = '16%';
+            navigation.style.width = '10%';
             main.style.marginLeft = "0%";
         }
-
-
     } else if (ev.target.id == 'toggleClose') {
         toggleOpen.style.display = 'inline-block';
         toggleClose.style.display = 'none';
 
         li.forEach(item => item.style.display = 'none');
         if (window.screen.width < 600) {
-            // navigation.style.transition = '0.5s';
             navigation.style.width = '8%';
             main.style.marginLeft = "-42%";
         } else if (window.screen.width > 600) {
-            // navigation.style.transition = '0.5s';
-            navigation.style.width = '5%';
-            main.style.marginLeft = "-14%";
+            navigation.style.width = '3.3%';
+            main.style.marginLeft = "-8%";
         }
-
-
     }
-    //TODO: fix the show / hide nav for phone resolution
-
 }

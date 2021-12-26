@@ -11,6 +11,13 @@ export function showDashboard() {
         <div id="navigation">
                 
         </div>
+        <table id="tabs">
+            <th class="tab">My tasks</th>
+            <th class="tab">Create task</th>
+            <th class="tab">Assign task</th>
+            <th class="tab">Completed tasks</th>
+        </table>
+        <hr>
         <div id="container">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod ullam id vero recusandae fugit voluptate non molestiae delectus et fugiat labore possimus cumque excepturi a eligendi tempora quae, vitae deserunt.
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod ullam id vero recusandae fugit voluptate non molestiae delectus et fugiat labore possimus cumque excepturi a eligendi tempora quae, vitae deserunt.

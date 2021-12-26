@@ -1,9 +1,23 @@
 #main section#dashboardView {
-    margin-left: 18%;
+    margin-left: 12%;
+}
+
+#tabs .tab {
+    background-color: rgb(208, 226, 238);
+    border: 0px solid;
+    border-radius: 5px;
+    width: 1%;
+    cursor: pointer;
+}
+
+#tabs .tab:hover {
+    cursor: pointer;
+    color: rgb(61, 107, 233);
 }
 
 @media screen and (max-width: 600px) {
     #main section#dashboardView {
         margin-left: 38%;
     }
+    #tabs .tab {}
 }
