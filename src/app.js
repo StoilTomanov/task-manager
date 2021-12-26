@@ -11,5 +11,7 @@ page('/', showHome);
 page('/signin', showSignIn);
 page('/signup', showSignUp);
 page('/dashboard', showDashboard);
+page('/myteam', showDashboard);
+page('/settings', showDashboard);
 
 page.start();
