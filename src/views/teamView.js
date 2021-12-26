@@ -12,8 +12,8 @@ export function showTeam() {
                     
         </div>
         <div id="memberAction">
-            <button id="addMemebr">Add Member</button>
-            <button id="removeMember">Remove Member</button>
+            <button class="membersBtn" id="addMemeber">Add Member</button>
+            <button class="membersBtn" id="removeMember">Remove Member</button>
         </div>
         <div id="members">
             <table>
