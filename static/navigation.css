@@ -1,25 +1,60 @@
 .img#dashboard {
     width: 20px;
-    margin-top: 15%;
+    margin-top: 20%;
+    margin-left: 5px;
 }
 
 .img#team {
     width: 20px;
     margin-top: 15%;
+    margin-left: 5px;
 }
 
 .img#settings {
     width: 20px;
+    margin-top: 15%;
+    margin-left: 5px;
 }
 
 li a {
     text-align: left;
     text-decoration: none;
     color: rgb(255, 255, 255);
+    margin: 10px;
 }
 
-nav {
-    background-color: rgb(70, 159, 236);
+#navigation nav {
+    background-color: rgb(25, 114, 192);
     display: inline;
     float: left;
+    position: fixed;
+    width: 18%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+button#toggleOpen {
+    color: black;
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    cursor: pointer;
+    z-index: 1;
+    background-color: rgba(245, 222, 179, 0);
+    border: 0px;
+    font-size: 110%;
+}
+
+button#toggleClose {
+    color: black;
+    position: fixed;
+    left: 130px;
+    top: 15px;
+    cursor: pointer;
+    z-index: 1;
+    background-color: rgba(245, 222, 179, 0);
+    border: 0px;
+    font-size: 110%;
 }
