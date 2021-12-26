@@ -1,4 +1,3 @@
-import { showNavBar } from './controllers/navbar.js';
 import page from './lib/page.mjs';
 import { showDashboard } from './views/dashboardView.js';
 import { showHome } from './views/homeView.js';
@@ -14,5 +13,3 @@ page('/signup', showSignUp);
 page('/dashboard', showDashboard);
 
 page.start();
-
-showNavBar()
