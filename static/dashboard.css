@@ -1,9 +1,9 @@
-#main {
+#main section#dashboardView {
     margin-left: 18%;
 }
 
 @media screen and (max-width: 600px) {
-    #main {
+    #main section#dashboardView {
         margin-left: 38%;
     }
 }
