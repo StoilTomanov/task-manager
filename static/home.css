@@ -24,6 +24,17 @@ html {
 
 img#logo {
     height: 300px;
+    animation-duration: 0.7s;
+    animation-name: fadein;
+}
+
+@keyframes fadein {
+    from {
+        height: 0;
+    }
+    to {
+        height: 300px;
+    }
 }
 
 #sign-case a#sign-in {

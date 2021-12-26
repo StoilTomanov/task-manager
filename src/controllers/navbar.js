@@ -5,6 +5,8 @@ export function toggleNav(ev) {
     const toggleOpen = document.getElementById('toggleOpen');
     const toggleClose = document.getElementById('toggleClose');
     const navigation = document.querySelector('[id="navbar"]');
+    navigation.style.transition = '0.3s';
+    main.style.transition = '0.3s';
 
     if (ev.target.id == 'toggleOpen') {
         toggleOpen.style.display = 'none';
@@ -12,9 +14,11 @@ export function toggleNav(ev) {
 
         li.forEach(item => item.style.display = 'inline-block');
         if (window.screen.width < 600) {
+            // navigation.style.transition = '0.5s';
             navigation.style.width = '35%';
             main.style.marginLeft = "0%";
         } else if (window.screen.width > 600) {
+            // navigation.style.transition = '0.5s';
             navigation.style.width = '16%';
             main.style.marginLeft = "0%";
         }
@@ -26,9 +30,11 @@ export function toggleNav(ev) {
 
         li.forEach(item => item.style.display = 'none');
         if (window.screen.width < 600) {
+            // navigation.style.transition = '0.5s';
             navigation.style.width = '8%';
             main.style.marginLeft = "-42%";
         } else if (window.screen.width > 600) {
+            // navigation.style.transition = '0.5s';
             navigation.style.width = '5%';
             main.style.marginLeft = "-14%";
         }
