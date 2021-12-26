@@ -1,0 +1,14 @@
+#main section#teamView {
+    margin-left: 12%;
+}
+
+#members table td {
+    border: 1px solid;
+    border-radius: 5px;
+    width: 1%;
+}
+
+#memberAction {
+    text-align: center;
+    margin: 20px;
+}
