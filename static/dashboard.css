@@ -1,0 +1,9 @@
+#main {
+    margin-left: 18%;
+}
+
+@media screen and (max-width: 600px) {
+    #main {
+        margin-left: 38%;
+    }
+}

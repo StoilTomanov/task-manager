@@ -17,7 +17,8 @@
 }
 
 li.navLi {
-    display: none;
+    display: inline-block;
+    margin-top: 10px;
 }
 
 li a {
@@ -25,9 +26,19 @@ li a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     margin: 10px;
+    transition: 0.2s;
 }
 
-#navigation nav {
+li a:hover {
+    text-align: left;
+    text-decoration: none;
+    color: rgb(17, 196, 11);
+    margin: 10px;
+    font-size: 110%;
+    transition: 0.2s;
+}
+
+#navigation nav#navbar {
     background-color: rgb(25, 114, 192);
     display: inline;
     float: left;
@@ -42,14 +53,21 @@ li a {
 button#toggleOpen {
     color: black;
     position: fixed;
-    left: 15px;
+    left: 13px;
     top: 3px;
     cursor: pointer;
     z-index: 1;
     background-color: rgba(245, 222, 179, 0);
     border: 0px;
     font-size: 110%;
-    /* display: none; */
+    display: none;
+    transition: 0.2s;
+}
+
+button#toggleOpen:hover {
+    font-size: 120%;
+    transition: 0.2s;
+    color: rgb(91, 253, 76);
 }
 
 button#toggleClose {
@@ -63,27 +81,39 @@ button#toggleClose {
     border: 0px;
     font-size: 110%;
     /* display: none; */
+    transition: 0.2s;
     display: inline-block;
+}
+
+button#toggleClose:hover {
+    font-size: 120%;
+    transition: 0.2s;
+    color: rgb(91, 253, 76);
 }
 
 @media screen and (max-width: 600px) {
     #navigation nav {
-        background-color: rgb(25, 114, 192);
-        display: inline;
-        float: left;
-        position: fixed;
-        width: 30%;
+        width: 50%;
         height: 100%;
         z-index: 1;
-        top: 0;
-        left: 0;
     }
     button#toggleOpen {
         left: 5px;
         top: 2px;
     }
     button#toggleClose {
-        left: 100px;
+        left: 120px;
         top: 2px;
+    }
+    #navigation nav#navbar {
+        background-color: rgb(25, 114, 192);
+        display: inline;
+        float: left;
+        position: fixed;
+        width: 35%;
+        height: 100%;
+        z-index: 1;
+        top: 0;
+        left: 0;
     }
 }
