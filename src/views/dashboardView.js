@@ -33,7 +33,3 @@ export function showDashboard() {
     const navigation = document.getElementById('navigation');
     render(navigationBar(), navigation);
 }
-
-{
-
-}
