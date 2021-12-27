@@ -33,8 +33,48 @@ input:checked[type="checkbox"]:before {
 }
 
 form#settings {
+    display: inline-block;
     margin-left: 15%;
     margin-top: 4%;
+}
+
+form#settings input[type="password"] {
+    display: block;
+    border-radius: 4px;
+    margin-left: 200%;
+    margin-top: 4px
+}
+
+form#settings input[type="text"] {
+    display: block;
+    border-radius: 4px;
+    margin-left: 200%;
+}
+
+form#settings input[type="submit"] {
+    border: 2px solid rgb(25, 116, 190);
+    border-radius: 4px;
+    margin-top: 40px;
+    margin-left: 100%;
+    width: 100px;
+    height: 30px;
+    background: none;
+}
+
+form#settings label.change-value {
+    position: relative;
+    top: 20px;
+}
+
+#settings div.box {
+    border-bottom: 2px solid rgb(25, 116, 190);
+    border-right: 2px solid rgb(25, 116, 190);
+    margin: 30px;
+}
+
+div#toggle {
+    position: relative;
+    left: 330px;
 }
 
 @media screen and (max-width: 600px) {
@@ -42,4 +82,15 @@ form#settings {
         margin-left: 42%;
         margin-top: 4%;
     }
+    form#settings input[type="password"] {
+        display: block;
+        margin-left: 0%;
+        margin-top: 24px
+    }
+    form#settings input[type="text"] {
+        display: block;
+        margin-top: 24px;
+        margin-left: 0%;
+    }
+    /* TODO: Fix the settings view on 600px */
 }
