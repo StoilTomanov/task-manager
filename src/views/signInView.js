@@ -8,7 +8,7 @@ export function showSignIn() {
     const template = html `
     <section id="loginView">
         <button class="backBtn" @click=${onBack}>&#8592</button>
-        <h3>Sign In</h3>
+        <h3>Log In</h3>
         <div @click=${onTypeChoice}>
             <button class="type"  id="team">Team</button>
             <button class="type"  id="individual">Individual</button>
@@ -22,7 +22,7 @@ export function showSignIn() {
                     <input type="text" name="name" id="name" placeholder="Enter team id...">
                     <label for="name">Password</label>
                     <input type="password" name="name" id="name" placeholder="Enter password...">
-                    <input type="submit" value="Sign In" class="submitBtn">
+                    <input type="submit" value="Log In" class="submitBtn">
                 </form>
             </div>
             <div class="form">
@@ -31,12 +31,12 @@ export function showSignIn() {
                     <input type="text" name="name" id="name" placeholder="Enter username...">
                     <label for="name">Password</label>
                     <input type="password" name="name" id="name" placeholder="Enter password...">
-                    <input type="submit" value="Sign In" class="submitBtn">
+                    <input type="submit" value="Log In" class="submitBtn">
                 </form>
             </div>
         </div>
         <div class="container-signup">
-            <p>Don't have an account?<a href="/signup"> Sign up</a></p>
+            <p>Don't have an account?<a href="/signup"> Register</a></p>
         </div>
     </section>
     `

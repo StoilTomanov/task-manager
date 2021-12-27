@@ -12,8 +12,8 @@ export function showHome() {
             </h1>
         </div>
         <div id="sign-case">
-            <a id="sign-in" href="/signin">Sign in</a>
-            <p id="para">Don't have an account? <a href="/signup" id="sign-up">Sign up</a></p>
+            <a id="sign-in" href="/signin">Log in</a>
+            <p id="para">Don't have an account? <a href="/signup" id="sign-up">Register</a></p>
         </div>
     </section>
     `
