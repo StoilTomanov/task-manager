@@ -32,23 +32,14 @@ input:checked[type="checkbox"]:before {
     left: 45px;
 }
 
-td.value {
-    display: block;
-    border-radius: 10px;
-    width: 100%;
-}
-
-td.value input {
-    border-radius: 3px;
-}
-
-#options-table {
-    margin-top: 5%;
+form#settings {
     margin-left: 15%;
+    margin-top: 4%;
 }
 
 @media screen and (max-width: 600px) {
-    #options-table {
-        margin-left: 35%;
+    form#settings {
+        margin-left: 42%;
+        margin-top: 4%;
     }
 }

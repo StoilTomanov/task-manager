@@ -11,48 +11,32 @@ export function showSettings() {
         <div id="navigation">
                     
         </div>
-        <table id="options-table">
-            <tr id="switch-theme">
-                <th class="option">
-                    Switch theme
-                </th>
-                <td class="toggle">
+        <div>
+            <form id="settings">
+                <div>
                     <label for="toggle-dark">Light</label>
                     <input type="checkbox" id="toggle-btn">
                     <label for="toggle-light">Dark</label>
-                </td>
-            </tr>
-            <tr id="ch-username">
-                <th class="option">
-                    Change username
-                </th>
-                <td class="value">
+                </div>
+                <div>
+                    <label for="username">Change username</label>
                     <input type="text" name="username" id="username" class="change-value">
-                </td>
-            </tr>
-            <tr id="ch-teamName">
-                <th class="option">
-                    Change Team name
-                </th>
-                <td class="value">
-                    <input type="text" name="username" id="username" class="change-value">
-                </td>
-            </tr>
-            <tr id="ch-password">
-                <th class=" ">
-                    Change password
-                </th>
-                <td class="value">
+                </div>
+                <div>
+                    <label for="teamName">Change Team name</label>
+                    <input type="text" name="teamName" id="teamName" class="change-value">
+                </div>
+                <div>
+                    <label for="teamName">Change password</label>
                     <input type="password" name="old-pass" id="old-pass" class="change-value" placeholder="Old password">
-                </td>
-                <td class="value">
                     <input type="password" name="new-pass" id="old-pass" class="change-value" placeholder="New password">
-                </td>
-                <td class="value">
                     <input type="password" name="re-pass" id="old-pass" class="change-value" placeholder="Repeat password">
-                </td>
-            </tr>
-        </table>
+                </div>
+                <div>
+                    <input type="submit" value="Apply" class="applyBtn">
+                </div>
+            </form>
+        </div>
     </section>
         `
     render(template, main);
