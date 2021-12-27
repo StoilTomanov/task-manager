@@ -41,3 +41,14 @@ td.value {
 td.value input {
     border-radius: 3px;
 }
+
+#options-table {
+    margin-top: 5%;
+    margin-left: 15%;
+}
+
+@media screen and (max-width: 600px) {
+    #options-table {
+        margin-left: 35%;
+    }
+}
