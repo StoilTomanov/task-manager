@@ -2,8 +2,8 @@ input[type="checkbox"] {
     position: relative;
     width: 60px;
     height: 15px;
-    top: 5px;
-    left: 13%;
+    top: 45px;
+    left: -10.5%;
     display: inline-block;
     transition: 0.2s;
     appearance: none;
@@ -54,7 +54,8 @@ form#settings label.change-value {
 
 label.toggle-txt {
     position: relative;
-    left: 13%;
+    left: -10.4%;
+    top: 40px;
 }
 
 form#settings input[type="password"] {
@@ -73,6 +74,7 @@ div#toggle {
     padding: 5%;
     border-bottom: 1px solid;
     width: 430%;
+    height: 65px;
     border-radius: 5px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
