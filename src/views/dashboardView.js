@@ -1,4 +1,5 @@
 import { body, main } from '../app.js';
+import { onTaskChoice } from '../controllers/dashboard.js';
 import { html, render } from '../lib/lit-html.js';
 import { navigationBar } from '../views/navigationView.js';
 
@@ -11,7 +12,7 @@ export function showDashboard() {
             <div id="navigation">
                     
             </div>
-            <table id="tabs">
+            <table id="tabs" @click=${onTaskChoice}>
                 <th class="tab">My tasks</th>
                 <th class="tab">Create task</th>
                 <th class="tab">Assign task</th>
