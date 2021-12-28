@@ -3,6 +3,7 @@ input[type="checkbox"] {
     width: 60px;
     height: 15px;
     top: 5px;
+    left: 13%;
     display: inline-block;
     transition: 0.2s;
     appearance: none;
@@ -32,65 +33,81 @@ input:checked[type="checkbox"]:before {
     left: 45px;
 }
 
+form#settings input {
+    font-size: 105%;
+}
+
+form#settings label {
+    font-size: 105%;
+}
+
 form#settings {
     display: inline-block;
     margin-left: 15%;
     margin-top: 4%;
 }
 
+form#settings label.change-value {
+    display: inline-block;
+    font-weight: bold;
+}
+
+label.toggle-txt {
+    position: relative;
+    left: 13%;
+}
+
 form#settings input[type="password"] {
     display: block;
     border-radius: 4px;
-    margin-left: 200%;
     margin-top: 4px
 }
 
 form#settings input[type="text"] {
     display: block;
     border-radius: 4px;
-    margin-left: 200%;
-}
-
-form#settings input[type="submit"] {
-    border: 2px solid rgb(25, 116, 190);
-    border-radius: 4px;
-    margin-top: 40px;
-    margin-left: 100%;
-    width: 100px;
-    height: 30px;
-    background: none;
-}
-
-form#settings label.change-value {
-    position: relative;
-    top: 20px;
-}
-
-#settings div.box {
-    border-bottom: 2px solid rgb(25, 116, 190);
-    border-right: 2px solid rgb(25, 116, 190);
-    margin: 30px;
 }
 
 div#toggle {
-    position: relative;
-    left: 330px;
+    background: rgba(78, 171, 233, 0.116);
+    padding: 5%;
+    border-bottom: 1px solid;
+    width: 430%;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-bottom: 5%;
 }
 
-@media screen and (max-width: 600px) {
-    form#settings {
-        margin-left: 42%;
-        margin-top: 4%;
-    }
-    form#settings input[type="password"] {
-        display: block;
-        margin-left: 0%;
-        margin-top: 24px
-    }
-    form#settings input[type="text"] {
-        display: block;
-        margin-top: 24px;
-        margin-left: 0%;
-    }
-    /* TODO: Fix the settings view on 600px */
+div#ch-username {
+    background: rgba(78, 171, 233, 0.116);
+    padding: 5%;
+    border-bottom: 1px solid;
+    width: 430%;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-bottom: 5%;
+}
+
+div#ch-teamName {
+    background: rgba(78, 171, 233, 0.116);
+    padding: 5%;
+    border-bottom: 1px solid;
+    width: 430%;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-bottom: 5%;
+}
+
+div#ch-password {
+    background: rgba(78, 171, 233, 0.116);
+    padding: 5%;
+    border-bottom: 1px solid;
+    width: 430%;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-bottom: 5%;
 }
