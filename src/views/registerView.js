@@ -18,10 +18,10 @@ export function showSignUp() {
                 <form id="team-form">
                     <label for="team-name">Team name</label>
                     <input type="text" name="team-name" id="team-name" placeholder="Enter team name...">
-                    <label for="name">Team ID</label>
+                    <label for="identifier">Team ID</label>
                     <input type="text" name="identifier" id="identifier" placeholder="Enter team id...">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" id="username" placeholder="Enter username...">
+                    <!-- <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Enter username..."> -->
                     <label for="password">Password</label>
                     <input type="password" name="name" id="password" placeholder="Enter password...">
                     <label for="re-password">Repeat password</label>

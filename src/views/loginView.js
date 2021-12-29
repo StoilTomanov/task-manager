@@ -20,10 +20,10 @@ export function showSignIn() {
                     <input type="text" name="team-name" id="team-name" placeholder="Enter team name...">
                     <label for="identifier">Team ID</label>
                     <input type="text" name="identifier" id="identifier" placeholder="Enter team id...">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" id="username" placeholder="Enter username...">
-                    <label for="name">Password</label>
-                    <input type="password" name="name" id="name" placeholder="Enter password...">
+                    <!-- <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Enter username..."> -->
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter password...">
                     <input type="submit" value="Log In" class="submitBtn">
                 </form>
             </div>
@@ -31,8 +31,8 @@ export function showSignIn() {
                 <form id="ind-form">
                     <label for="name">Username</label>
                     <input type="text" name="name" id="name" placeholder="Enter username...">
-                    <label for="name">Password</label>
-                    <input type="password" name="name" id="name" placeholder="Enter password...">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter password...">
                     <input type="submit" value="Log In" class="submitBtn">
                 </form>
             </div>
