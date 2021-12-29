@@ -16,24 +16,26 @@ export function showSignUp() {
         <div class="container-forms">
             <div class="form">
                 <form id="team-form">
-                    <label for="name">Team name</label>
-                    <input type="text" name="name" id="name" placeholder="Enter team name...">
+                    <label for="team-name">Team name</label>
+                    <input type="text" name="team-name" id="team-name" placeholder="Enter team name...">
                     <label for="name">Team ID</label>
                     <input type="text" name="identifier" id="identifier" placeholder="Enter team id...">
-                    <label for="name">Password</label>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Enter username...">
+                    <label for="password">Password</label>
                     <input type="password" name="name" id="password" placeholder="Enter password...">
-                    <label for="name">Repeat password</label>
-                    <input type="password" name="re-password" id="re-passwords" placeholder="Repeat password...">
+                    <label for="re-password">Repeat password</label>
+                    <input type="password" name="re-password" id="re-password" placeholder="Repeat password...">
                     <input type="submit" value="Register" class="submitBtn">
                 </form>
             </div>
             <div class="form">
                 <form id="ind-form">
-                    <label for="name">Username</label>
-                    <input type="text" name="name" id="name" placeholder="Enter username...">
-                    <label for="name">Password</label>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Enter username...">
+                    <label for="password">Password</label>
                     <input type="password" name="password" id="password" placeholder="Enter password...">
-                    <label for="name">Repeat password</label>
+                    <label for="re-password">Repeat password</label>
                     <input type="password" name="re-password" id="re-passwords" placeholder="Repeat password...">
                     <input type="submit" value="Register" class="submitBtn">
                 </form>
