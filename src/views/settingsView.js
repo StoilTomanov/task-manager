@@ -7,7 +7,7 @@ export function showSettings() {
     body.style.background = 'rgb(255, 255, 255)';
 
     const template = html `
-        <section id="settingsView">
+        <!-- <section id="settingsView">
         <div id="navigation">
                     
         </div>
@@ -38,7 +38,7 @@ export function showSettings() {
                 </div>
             </form>
         </div>
-    </section>
+    </section> -->
         `
     render(template, main);
     const navigation = document.getElementById('navigation');

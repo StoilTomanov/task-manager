@@ -2,8 +2,7 @@ input[type="checkbox"] {
     position: relative;
     width: 60px;
     height: 15px;
-    top: 45px;
-    left: -10.5%;
+    /* left: -10.5%; */
     display: inline-block;
     transition: 0.2s;
     appearance: none;
@@ -33,7 +32,8 @@ input:checked[type="checkbox"]:before {
     left: 45px;
 }
 
-form#settings input {
+
+/* form#settings input {
     font-size: 105%;
 }
 
@@ -112,7 +112,14 @@ div#ch-password {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     margin-bottom: 5%;
-}
+} */
 
 
 /* TODO: add queries for navbar and form */
+
+.option {
+    border: 1px solid;
+    border-radius: 5px;
+    margin-left: 15%;
+    background: rgba(86, 165, 243, 0.274);
+}
