@@ -147,4 +147,42 @@ label.toggle-txt {
     border-radius: 3px;
     position: relative;
     left: 15%;
+    margin-top: 1%;
+}
+
+#btns button {
+    position: relative;
+    left: 10%;
+    margin-top: 2%;
+    margin-left: 25%;
+    border: 1px solid rgb(87, 87, 87);
+    box-shadow: 1px 1px 2px 1px;
+    border-radius: 7px;
+    font-size: 100%;
+}
+
+#btns button:active {
+    box-shadow: 0px 0px 0px 0px;
+}
+
+#btns button#save-btn {
+    background: rgb(182, 255, 173);
+    transition: 0.2s;
+}
+
+#btns button#del-btn {
+    background: rgb(250, 68, 62);
+    transition: 0.2s;
+}
+
+#btns button#save-btn:hover {
+    cursor: pointer;
+    background: rgb(255, 255, 255);
+    transition: 0.2s;
+}
+
+#btns button#del-btn:hover {
+    cursor: pointer;
+    background: rgb(255, 255, 255);
+    transition: 0.2s;
 }
