@@ -34,6 +34,21 @@ export function showAssignTask() {
                     <button>Delete</button>
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <input type="text" readonly value="21.01.2022">
+                </td>
+                <td>
+                    <input type="text" readonly value="TODO">
+                </td>
+                <td>
+                    <input type="text" readonly value="In Progress">
+                </td>
+                <td>
+                    <button>Assign</button>
+                    <button>Delete</button>
+                </td>
+            </tr>
         </tbody>
     </table>
     `
