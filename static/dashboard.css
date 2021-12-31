@@ -9,7 +9,9 @@
     border-radius: 5px;
     width: 1%;
     cursor: pointer;
-    transition: 0.2s
+    transition: 0.2s;
+    animation-duration: 1.0s;
+    animation-name: zoomout;
 }
 
 #tabs .tab:hover {
@@ -19,8 +21,8 @@
 }
 
 th#firstTab {
-    background-color: rgb(49, 139, 218);
-    /* box-shadow: 0px 0px 6px 1px; */
+    background-color: rgb(189, 229, 255);
+    /* background-color: rgb(49, 139, 218); */
 }
 
 th#secondTab {
@@ -33,6 +35,13 @@ th#thirdTab {
 
 th#forthTab {
     background-color: rgb(189, 229, 255);
+}
+
+@keyframes zoomout {
+    from {
+        font-size: 150%;
+        background-color: rgb(30, 255, 0);
+    }
 }
 
 @media screen and (max-width: 600px) {
