@@ -119,6 +119,7 @@ div#ch-password {
 /* TODO: add queries for navbar and form */
 
 .option {
+    font-family: ext-font, 'Maiandra GD', 'Courier New', Courier, monospace;
     border: 1px solid;
     border-radius: 5px;
     margin-left: 12%;
@@ -133,6 +134,7 @@ label.toggle-txt {
 }
 
 .option-container input {
+    font-family: ext-font, 'Maiandra GD', 'Courier New', Courier, monospace;
     background: rgb(255, 255, 255);
     border: 1px solid;
     display: block;
@@ -154,6 +156,7 @@ label.toggle-txt {
 }
 
 #btns button {
+    font-family: ext-font, 'Maiandra GD', 'Courier New', Courier, monospace;
     position: relative;
     left: 10%;
     margin-top: 2%;

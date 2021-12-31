@@ -6,6 +6,7 @@
 #members table td {
     border: 1px solid;
     border-radius: 5px;
+    font-family: ext-font, 'Maiandra GD', 'Courier New', Courier, monospace;
     width: 1%;
 }
 
@@ -15,6 +16,7 @@
 }
 
 button.membersBtn {
+    font-family: ext-font, 'Maiandra GD', 'Courier New', Courier, monospace;
     background: none;
     cursor: pointer;
     border: 2px solid;
