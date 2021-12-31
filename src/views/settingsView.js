@@ -7,38 +7,51 @@ export function showSettings() {
     body.style.background = 'rgb(255, 255, 255)';
 
     const template = html `
-        <!-- <section id="settingsView">
+        <section id="settingsView">
+
         <div id="navigation">
                     
         </div>
+
         <div>
-            <form id="settings">
-                <div id="toggle">
-                <label class="change-value">Change theme</label>
-                <label for="toggle-dark" class="toggle-txt">Light</label>
+            <aside id="settings-options">
+                <div class="theme-container">
+                    <h4 class="option">Change theme</h4>
+                    <label for="toggle-dark" class="toggle-txt">Light</label>
                     <input type="checkbox" id="toggle-btn">
-                <label for="toggle-light" class="toggle-txt">Dark</label>
+                    <label for="toggle-light" class="toggle-txt">Dark</label>
                 </div>
-                <div class="box" id="ch-username">
-                    <label for="username" class="change-value">Change username</label>
+                <div class="option-container">
+                    <h4 class="option">Change team name</h4>
+                    <input type="text" name="team-name" id="team-name">
+                </div>
+                <div class="option-container">
+                    <h4 class="option">Change username</h4>
                     <input type="text" name="username" id="username">
                 </div>
-                <div class="box" id="ch-teamName">
-                    <label for="teamName" class="change-value">Change Team name</label>
-                    <input type="text" name="teamName" id="teamName">
+                <div class="option-container">
+                    <h4 class="option">Change email</h4>
+                    <input type="email" name="username" id="username">
                 </div>
-                <div class="box" id="ch-password">
-                    <label for="password" class="change-value">Change password</label>
-                    <input type="password" name="old-pass" id="old-pass" placeholder="Old password">
-                    <input type="password" name="new-pass" id="old-pass" placeholder="New password">
-                    <input type="password" name="re-pass" id="old-pass" placeholder="Repeat password">
+                <div class="option-container">
+                    <h4 class="option">Change employer name</h4>
+                    <input type="text" name="emp-name" id="emp-name">
                 </div>
-                <div>
-                    <input type="submit" value="Apply" class="applyBtn">
+                <div class="pass-container">
+                    <h4 class="option">Change password</h4>
+                    <input type="password" name="old-password" id="old-password" placeholder="old password">
+                    <input type="password" name="new-password" id="new-password" placeholder="new password">
+                    <input type="password" name="re-password" id="re-password" placeholder="repeat password">
                 </div>
-            </form>
+
+                <div id="btns">
+                    <button id="save-btn">Save changes</button>
+                    <button id="del-btn">Delete account</button>
+                </div>
+
+            </aside>
         </div>
-    </section> -->
+    </section>
         `
     render(template, main);
     const navigation = document.getElementById('navigation');

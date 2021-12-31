@@ -51,3 +51,9 @@ button#removeMember:active {
     background-color: rgb(161, 203, 250);
     transition: 0.3s;
 }
+
+@media screen and (max-width: 600px) {
+    #main section#teamView {
+        margin-left: 38%;
+    }
+}

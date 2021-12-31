@@ -9,11 +9,13 @@
     border-radius: 5px;
     width: 1%;
     cursor: pointer;
+    transition: 0.2s
 }
 
 #tabs .tab:hover {
     cursor: pointer;
     color: rgb(61, 107, 233);
+    transition: 0.2s
 }
 
 @media screen and (max-width: 600px) {
