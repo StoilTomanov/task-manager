@@ -5,25 +5,27 @@ export function showMyTasks() {
     return html `
     <table>
         <thead id="table-head">
-            <div id="t-header">
-                <th>
-                    Date assigned
-                </th>
-                <th>
-                    Date expected
-                </th>
-                <th>
-                    Description
-                </th>
-                <th>
-                    Assignor
-                </th>
-                <th>
-                    Status
-                </th>
-                <th>
-                    Action
-                </th>
+            <div>
+                <tr id="t-header">
+                    <th>
+                        Date assigned
+                    </th>
+                    <th>
+                        Date expected
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Assignor
+                    </th>
+                    <th>
+                        Status
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
             </div>
         </thead>
         <tbody id="table-body">
