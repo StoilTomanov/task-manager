@@ -242,7 +242,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="pHl1vAuJ6-CCmdiAVpB4" name="My Tasks">
-        <mxGraphModel dx="734" dy="431" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#1A1A1A" math="0" shadow="0">
+        <mxGraphModel dx="507" dy="431" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#1A1A1A" math="0" shadow="0">
             <root>
                 <mxCell id="rFtxpwJyTfSBVpTOi02H-0"/>
                 <mxCell id="rFtxpwJyTfSBVpTOi02H-1" parent="rFtxpwJyTfSBVpTOi02H-0"/>
@@ -540,7 +540,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="Ec480ck-zMMzymx8l889" name="Settings">
-        <mxGraphModel dx="734" dy="431" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="507" dy="431" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="y-bkSKa-kZ-drS1O1ibp-0"/>
                 <mxCell id="y-bkSKa-kZ-drS1O1ibp-1" parent="y-bkSKa-kZ-drS1O1ibp-0"/>

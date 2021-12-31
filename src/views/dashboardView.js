@@ -13,20 +13,59 @@ export function showDashboard() {
                     
             </div>
             <table id="tabs" @click=${onTaskChoice}>
-                <th class="tab">My tasks</th>
-                <th class="tab">Create task</th>
-                <th class="tab">Assign task</th>
-                <th class="tab">Completed tasks</th>
+                <th id="firstTab" class="tab">My tasks</th>
+                <th id="secondTab" class="tab">Create task</th>
+                <th id="thirdTab" class="tab">Assign task</th>
+                <th id="forthTab" class="tab">Completed tasks</th>
             </table>
             <hr>
             <div id="container">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod ullam id vero recusandae fugit voluptate non molestiae delectus et fugiat labore possimus cumque excepturi a eligendi tempora quae, vitae deserunt.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod ullam id vero recusandae fugit voluptate non molestiae delectus et fugiat labore possimus cumque excepturi a eligendi tempora quae, vitae deserunt.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod ullam id vero recusandae fugit voluptate non molestiae delectus et fugiat labore possimus cumque excepturi a eligendi tempora quae, vitae deserunt.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod ullam id vero recusandae fugit voluptate non molestiae delectus et fugiat labore possimus cumque excepturi a eligendi tempora quae, vitae deserunt.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod ullam id vero recusandae fugit voluptate non molestiae delectus et fugiat labore possimus cumque excepturi a eligendi tempora quae, vitae deserunt.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod ullam id vero recusandae fugit voluptate non molestiae delectus et fugiat labore possimus cumque excepturi a eligendi tempora quae, vitae deserunt.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod ullam id vero recusandae fugit voluptate non molestiae delectus et fugiat labore possimus cumque excepturi a eligendi tempora quae, vitae deserunt.
+                <table>
+                    <thead>
+                        <th>
+                            Date assigned
+                        </th>
+                        <th>
+                            Date expected
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Assignor
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="text" readonly value="17.12.2021">
+                            </td>
+                            <td>
+                                <input type="text" readonly value="21.01.2022">
+                            </td>
+                            <td>
+                                <input type="text" readonly value="TODO">
+                            </td>
+                            <td>
+                                <input type="text" readonly value="My Colleague">
+                            </td>
+                            <td>
+                                <input type="text" readonly value="In Progress">
+                            </td>
+                            <td>
+                                <button>Start</button>
+                                <button>Delete</button>
+                                <button>Finish</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
         `

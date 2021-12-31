@@ -5,7 +5,6 @@
 }
 
 #tabs .tab {
-    background-color: rgb(208, 226, 238);
     border: 0px solid;
     border-radius: 5px;
     width: 1%;
@@ -15,8 +14,25 @@
 
 #tabs .tab:hover {
     cursor: pointer;
-    color: rgb(61, 107, 233);
+    color: rgb(255, 255, 255);
     transition: 0.2s
+}
+
+th#firstTab {
+    background-color: rgb(49, 139, 218);
+    /* box-shadow: 0px 0px 6px 1px; */
+}
+
+th#secondTab {
+    background-color: rgb(189, 229, 255);
+}
+
+th#thirdTab {
+    background-color: rgb(189, 229, 255);
+}
+
+th#forthTab {
+    background-color: rgb(189, 229, 255);
 }
 
 @media screen and (max-width: 600px) {
