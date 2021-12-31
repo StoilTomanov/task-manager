@@ -319,7 +319,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="Create Task" id="Bxey_xHAdlFk8AuAzYJt">
-        <mxGraphModel dx="734" dy="431" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#1A1A1A" math="0" shadow="0">
+        <mxGraphModel dx="507" dy="431" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#1A1A1A" math="0" shadow="0">
             <root>
                 <mxCell id="ZsSHGhpnrCpq3rTv32ys-0"/>
                 <mxCell id="ZsSHGhpnrCpq3rTv32ys-1" parent="ZsSHGhpnrCpq3rTv32ys-0"/>
@@ -366,7 +366,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="Assign Task" id="cJ7nPaUIGkfXLcd0R4wP">
-        <mxGraphModel dx="734" dy="431" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#1A1A1A" math="0" shadow="0">
+        <mxGraphModel dx="507" dy="431" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#1A1A1A" math="0" shadow="0">
             <root>
                 <mxCell id="-d6uGLVHtzoNQH3JRqCv-0"/>
                 <mxCell id="-d6uGLVHtzoNQH3JRqCv-1" parent="-d6uGLVHtzoNQH3JRqCv-0"/>
@@ -407,7 +407,7 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="-d6uGLVHtzoNQH3JRqCv-17" value="Assign" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fillColor=none;" parent="-d6uGLVHtzoNQH3JRqCv-1" vertex="1">
-                    <mxGeometry x="634.5" y="157" width="65" height="21" as="geometry"/>
+                    <mxGeometry x="615" y="152" width="51" height="21" as="geometry"/>
                 </mxCell>
                 <mxCell id="-d6uGLVHtzoNQH3JRqCv-19" value="Unassigned" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fillColor=none;" parent="-d6uGLVHtzoNQH3JRqCv-1" vertex="1">
                     <mxGeometry x="494.5" y="157" width="70" height="21" as="geometry"/>
@@ -451,11 +451,14 @@
                 <mxCell id="wRUUH35wcuywhK6iV5tM-2" value="Done" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fillColor=none;arcSize=6;" parent="-d6uGLVHtzoNQH3JRqCv-1" vertex="1">
                     <mxGeometry x="438" y="337" width="59" height="19" as="geometry"/>
                 </mxCell>
+                <mxCell id="Gfn90-gNhuyTiFrUTFyA-0" value="Delete" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fillColor=none;" vertex="1" parent="-d6uGLVHtzoNQH3JRqCv-1">
+                    <mxGeometry x="677" y="152" width="47" height="21" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram name="Completed Tasks" id="O-qeXNkXiSpv7LuSf_s7">
-        <mxGraphModel dx="734" dy="431" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#1A1A1A" math="0" shadow="0">
+        <mxGraphModel dx="507" dy="431" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#1A1A1A" math="0" shadow="0">
             <root>
                 <mxCell id="WiA8dWx4sJC2M9pHra-r-0"/>
                 <mxCell id="WiA8dWx4sJC2M9pHra-r-1" parent="WiA8dWx4sJC2M9pHra-r-0"/>

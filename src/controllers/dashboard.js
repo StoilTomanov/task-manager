@@ -1,4 +1,5 @@
 import { render } from '../lib/lit-html.js'
+import { showCreateTask } from '../views/createTaskView.js';
 import { showMyTasks } from '../views/myTasksView.js'
 
 export function onTaskChoice(ev) {
@@ -7,7 +8,7 @@ export function onTaskChoice(ev) {
     if (content == 'My tasks') {
         onMyTask();
     } else if (content == 'Create task') {
-
+        onCreateTask();
     } else if (content == 'Assign task') {
 
     } else if (content == 'Completed tasks') {
@@ -19,6 +20,9 @@ export function onTaskChoice(ev) {
 function onMyTask() {
     render(showMyTasks(), document.getElementById('container'));
 }
-// export function onCreateTask() {}
+export function onCreateTask() {
+    render(showCreateTask(), document.getElementById('container'));
+
+}
 // export function onAssignTask() {}
 // export function onCompletedTasks() {}
