@@ -2,7 +2,8 @@ input[type="checkbox"] {
     position: relative;
     width: 60px;
     height: 15px;
-    /* left: -10.5%; */
+    left: 15%;
+    top: 5px;
     display: inline-block;
     transition: 0.2s;
     appearance: none;
@@ -122,4 +123,28 @@ div#ch-password {
     border-radius: 5px;
     margin-left: 15%;
     background: rgba(86, 165, 243, 0.274);
+}
+
+label.toggle-txt {
+    display: inline-block;
+    position: relative;
+    left: 15%
+}
+
+.option-container input {
+    background: rgb(255, 255, 255);
+    border: 1px solid;
+    display: block;
+    border-radius: 3px;
+    position: relative;
+    left: 15%;
+}
+
+.pass-container input {
+    background: rgb(255, 255, 255);
+    border: 1px solid;
+    display: block;
+    border-radius: 3px;
+    position: relative;
+    left: 15%;
 }
