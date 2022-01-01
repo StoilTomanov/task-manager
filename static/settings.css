@@ -33,91 +33,6 @@ input:checked[type="checkbox"]:before {
     left: 45px;
 }
 
-
-/* form#settings input {
-    font-size: 105%;
-}
-
-form#settings label {
-    font-size: 105%;
-}
-
-form#settings {
-    display: inline-block;
-    margin-left: 15%;
-    margin-top: 4%;
-}
-
-form#settings label.change-value {
-    display: inline-block;
-    font-weight: bold;
-}
-
-label.toggle-txt {
-    position: relative;
-    left: -10.4%;
-    top: 40px;
-}
-
-form#settings input[type="password"] {
-    display: block;
-    border-radius: 4px;
-    margin-top: 4px
-}
-
-form#settings input[type="text"] {
-    display: block;
-    border-radius: 4px;
-}
-
-div#toggle {
-    background: rgba(78, 171, 233, 0.116);
-    padding: 5%;
-    border-bottom: 1px solid;
-    width: 430%;
-    height: 65px;
-    border-radius: 5px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    margin-bottom: 5%;
-}
-
-div#ch-username {
-    background: rgba(78, 171, 233, 0.116);
-    padding: 5%;
-    border-bottom: 1px solid;
-    width: 430%;
-    border-radius: 5px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    margin-bottom: 5%;
-}
-
-div#ch-teamName {
-    background: rgba(78, 171, 233, 0.116);
-    padding: 5%;
-    border-bottom: 1px solid;
-    width: 430%;
-    border-radius: 5px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    margin-bottom: 5%;
-}
-
-div#ch-password {
-    background: rgba(78, 171, 233, 0.116);
-    padding: 5%;
-    border-bottom: 1px solid;
-    width: 430%;
-    border-radius: 5px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    margin-bottom: 5%;
-} */
-
-
-/* TODO: add queries for navbar and form */
-
 .option {
     font-family: ext-font, 'Maiandra GD', 'Courier New', Courier, monospace;
     border: 1px solid;
@@ -164,6 +79,7 @@ label.toggle-txt {
     border: 1px solid rgb(87, 87, 87);
     box-shadow: 1px 1px 2px 1px;
     border-radius: 7px;
+    text-align: center;
     font-size: 100%;
 }
 
@@ -200,5 +116,10 @@ label.toggle-txt {
     #btns button {
         left: 5%;
         margin-top: 15%;
+    }
+    .option {
+        margin-right: 10%;
+        background: rgba(86, 165, 243, 0.274);
+        text-align: center;
     }
 }
