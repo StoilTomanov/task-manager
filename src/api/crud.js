@@ -6,7 +6,7 @@ const contentType = 'application/json';
 
 export async function login(userData) {
     const repsonse = await fetch(endpoint.login, {
-        method: 'get',
+        method: 'post',
         headers: {
             'X-Parse-Application-Id': appID,
             'X-Parse-REST-API-Key': apiKey,
