@@ -1,7 +1,4 @@
-/* table.table-tasks {
-    border: 1px solid rgb(72, 156, 189);
-    border-radius: 5px;
-} */
+/* My Tasks */
 
 table.table-tasks {
     width: 100%;
@@ -78,4 +75,47 @@ table button.finishBtn:hover {
         display: flex;
         flex-flow: row wrap;
     }
+}
+
+
+/* Create Task */
+
+form#create-task-form {
+    text-align: center;
+    margin-left: 28%;
+    display: block;
+    width: 40.8%;
+    box-shadow: 4px 4px 15px -4px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: rgb(216, 216, 216);
+    margin-top: 5%;
+    height: 380px;
+}
+
+form#create-task-form label {
+    display: block;
+    font-size: 110%;
+    margin-top: 7%;
+}
+
+form#create-task-form input {
+    display: inline-block;
+    font-size: 110%;
+    margin-top: 2%;
+}
+
+form#create-task-form input#submit-btn {
+    display: block;
+    font-size: 110%;
+    margin-top: 10%;
+    margin-left: 43.8%;
+}
+
+form#create-task-form textarea {
+    display: inline-block;
+    font-size: 120%;
+    resize: none;
+    margin-top: 2%;
+    border-radius: 7px;
 }
