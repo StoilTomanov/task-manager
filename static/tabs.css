@@ -1,6 +1,81 @@
+/* table.table-tasks {
+    border: 1px solid rgb(72, 156, 189);
+    border-radius: 5px;
+} */
+
+table.table-tasks {
+    width: 100%;
+}
+
+table.table-tasks input {
+    width: 96.5%;
+    font-size: 90%;
+    box-shadow: 1px 1px 5px #888888;
+}
+
+table.table-tasks button {
+    width: 27.5%;
+    margin: 2%;
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 5px;
+    font-size: 90%;
+    transition: 0.3s;
+}
+
+table button.startBtn {
+    background-color: rgb(156, 245, 156);
+}
+
+table button.startBtn:hover {
+    background-color: rgb(39, 218, 39);
+}
+
+table button.deleteBtn {
+    background-color: rgb(241, 144, 144);
+}
+
+table button.deleteBtn:hover {
+    background-color: rgb(226, 36, 36);
+}
+
+table button.finishBtn {
+    background-color: rgb(143, 206, 243);
+}
+
+table button.finishBtn:hover {
+    background-color: rgb(34, 161, 235);
+}
+
 #table-head {
-    font-size: 120%;
+    font-size: 110%;
 }
 
 
 /*  Tables are not responsive */
+
+@media screen and (max-width: 600px) {
+    table.table-tasks {
+        font-size: 80%;
+        display: flex;
+        width: 110%;
+        flex-flow: row wrap;
+    }
+    #table-head {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    #table-head th {
+        font-size: 80%;
+    }
+    table.table-tasks input {
+        width: 86.5%;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    table.table-tasks button {
+        width: 100%;
+        margin: 0%;
+        display: flex;
+        flex-flow: row wrap;
+    }
+}

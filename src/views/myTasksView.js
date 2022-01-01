@@ -3,7 +3,7 @@ import { html } from '../lib/lit-html.js';
 export function showMyTasks() {
 
     return html `
-    <table>
+    <table class="table-tasks">
         <thead id="table-head">
             <div>
                 <tr id="t-header">
@@ -46,9 +46,9 @@ export function showMyTasks() {
                     <input type="text" readonly value="In Progress">
                 </td>
                 <td>
-                    <button>Start</button>
-                    <button>Delete</button>
-                    <button>Finish</button>
+                    <button class="startBtn">Start</button>
+                    <button class="deleteBtn">Delete</button>
+                    <button class="finishBtn">Finish</button>
                 </td>
             </tr>
             <tr>
@@ -68,9 +68,9 @@ export function showMyTasks() {
                     <input type="text" readonly value="In Progress">
                 </td>
                 <td>
-                    <button>Start</button>
-                    <button>Delete</button>
-                    <button>Finish</button>
+                    <button class="startBtn">Start</button>
+                    <button class="deleteBtn">Delete</button>
+                    <button class="finishBtn">Finish</button>
                 </td>
             </tr>
         </tbody>
