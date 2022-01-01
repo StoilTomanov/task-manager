@@ -3,8 +3,8 @@ import { html } from '../lib/lit-html.js';
 export function showCompletedTasks() {
 
     return html `
-    <table>
-        <thead>
+    <table class="table-tasks">
+        <thead id="table-head">
             <th>
                 Date completed
             </th>
@@ -18,7 +18,7 @@ export function showCompletedTasks() {
                 Action
             </th>
         </thead>
-        <tbody>
+        <tbody id="table-body">
             <tr>
                 <td>
                     <input type="text" readonly value="21.01.2022">
@@ -30,8 +30,10 @@ export function showCompletedTasks() {
                     <input type="text" readonly value="Completed">
                 </td>
                 <td>
-                    <button>Re-assign</button>
-                    <button>Remove</button>
+                    <div class="actions">
+                        <button class="assignBtn">Re-assign</button>
+                        <button class="deleteBtn">Remove</button>
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -45,8 +47,10 @@ export function showCompletedTasks() {
                     <input type="text" readonly value="Completed">
                 </td>
                 <td>
-                    <button>Re-assign</button>
-                    <button>Remove</button>
+                    <div class="actions">
+                        <button class="assignBtn">Re-assign</button>
+                        <button class="deleteBtn">Remove</button>
+                    </div>
                 </td>
             </tr>
         </tbody>

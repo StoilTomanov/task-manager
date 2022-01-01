@@ -1,11 +1,14 @@
-/* My Tasks */
+/* My Tasks , Assign Task, Completed Tasks*/
 
 table.table-tasks {
     width: 100%;
 }
 
 table.table-tasks input {
+    text-align: center;
     width: 96.5%;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 3px;
     font-size: 90%;
     box-shadow: 1px 1px 5px #888888;
 }
@@ -17,6 +20,22 @@ table.table-tasks button {
     border-radius: 5px;
     font-size: 90%;
     transition: 0.3s;
+}
+
+div.actions {
+    text-align: center;
+}
+
+div.actions button {
+    width: 35%;
+}
+
+table button.assignBtn {
+    background-color: rgb(156, 245, 156);
+}
+
+table button.assignBtn:hover {
+    background-color: rgb(39, 218, 39);
 }
 
 table button.startBtn {
@@ -46,9 +65,6 @@ table button.finishBtn:hover {
 #table-head {
     font-size: 110%;
 }
-
-
-/*  Tables are not responsive */
 
 @media screen and (max-width: 600px) {
     table.table-tasks {
@@ -118,4 +134,31 @@ form#create-task-form textarea {
     resize: none;
     margin-top: 2%;
     border-radius: 7px;
+}
+
+@media screen and (max-width: 600px) {
+    form#create-task-form {
+        text-align: center;
+        margin-left: 7%;
+        display: block;
+        width: 85%;
+        box-shadow: 4px 4px 15px -4px;
+        border: 1px solid;
+        border-radius: 5px;
+        border-color: rgb(216, 216, 216);
+        margin-top: 5%;
+        height: 380px;
+    }
+    form#create-task-form textarea {
+        font-size: 100%;
+        width: 80%;
+        resize: none;
+    }
+    form#create-task-form input {
+        font-size: 90%;
+    }
+    form#create-task-form input#submit-btn {
+        font-size: 90%;
+        margin-left: 38%;
+    }
 }

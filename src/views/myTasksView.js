@@ -6,7 +6,7 @@ export function showMyTasks() {
     <table class="table-tasks">
         <thead id="table-head">
             <div>
-                <tr id="t-header">
+                <tr>
                     <th>
                         Date assigned
                     </th>
