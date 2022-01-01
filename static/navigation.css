@@ -16,6 +16,12 @@
     margin-left: 15px;
 }
 
+.img#logout {
+    width: 20px;
+    margin-top: 15%;
+    margin-left: 15px;
+}
+
 li.navLi {
     display: inline-block;
     margin-top: 10px;
