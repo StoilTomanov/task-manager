@@ -5,9 +5,15 @@ import { showSignIn } from './views/loginView.js';
 import { showSignUp } from './views/registerView.js';
 import { showSettings } from './views/settingsView.js';
 import { showTeam } from './views/teamView.js';
+import * as crud from './api/crud.js';
 
 export const main = document.getElementById('main');
 export const body = document.querySelector('html');
+
+window.login = crud.login;
+window.register = crud.register;
+window.logout = crud.logout;
+window.deleteUser = crud.deleteUser;
 
 page('/', showHome);
 page('/signin', showSignIn);

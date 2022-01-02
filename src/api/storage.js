@@ -12,6 +12,6 @@ export function getUserData() {
     }
 }
 
-export function delUserData() {
-    sessionStorage.clear()
+export function clearUserData() {
+    sessionStorage.clear();
 }

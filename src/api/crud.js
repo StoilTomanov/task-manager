@@ -1,4 +1,5 @@
 import { endpoint } from "./endpoints.js";
+import { clearUserData, setUserData } from "./storage.js";
 
 const appID = 'ojCxQpaTc8ay4TdoBxRNrrdkBpAANgEGFjJjKVia';
 const apiKey = '71aS9FE1hAsE9bN526INsJhpRbwKjBxxI5fX7p68';
@@ -14,9 +15,11 @@ export async function login(userData) {
         },
         body: JSON.stringify(userData),
     });
+    const result = await repsonse.json();
+    setUserData(result.username, result.sessionToken, result.objectId);
 }
 
-export function register(userData) {
+export async function register(userData) {
     const repsonse = await fetch(endpoint.register, {
         method: 'post',
         headers: {
@@ -27,16 +30,33 @@ export function register(userData) {
         },
         body: JSON.stringify(userData),
     });
+    const result = await repsonse.json();
+    setUserData(userData.username, result.sessionToken, result.objectId);
 }
 
-export function logout(userData) {
+export async function logout(userData) {
     const repsonse = await fetch(endpoint.logout, {
         method: 'post',
         headers: {
             'X-Parse-Application-Id': appID,
             'X-Parse-REST-API-Key': apiKey,
-            'X-Parse-Session-Token': sessionStorage, // session token here
+            'X-Parse-Session-Token': sessionStorage.sessionToken,
         },
         body: JSON.stringify(userData),
     });
+    clearUserData();
+}
+
+export async function deleteUser(userData) {
+    const repsonse = await fetch(endpoint.delete, {
+        method: 'delete',
+        headers: {
+            'X-Parse-Application-Id': appID,
+            'X-Parse-REST-API-Key': apiKey,
+            'X-Parse-Session-Token': sessionStorage.sessionToken,
+        },
+    });
+    // clearUserData();
+
+    //TODO: overwerite expiresAt session value ( currently expires afte 1 year )
 }
