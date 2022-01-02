@@ -1,8 +1,8 @@
-import { login } from "../api/crud.js";
+import { register } from "../api/crud.js";
 import { formHandler } from "../api/formHandler.js";
 import page from "../lib/page.mjs";
 
-export async function onLogin(ev) {
+export async function onRegister(ev) {
     ev.preventDefault();
     const form = document.getElementById(ev.target.id);
     const formData = formHandler(form);
@@ -12,8 +12,7 @@ export async function onLogin(ev) {
             throw new Error('Empty fields in the form!')
         }
     })
-
-    await login({ username: formData.username, password: formData.password });
+    await register({ username: formData.username, password: formData.password });
     page.redirect('/dashboard');
 
 }

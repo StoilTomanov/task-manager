@@ -9,18 +9,18 @@ export function showDashboard() {
 
     const template = html `
         <section id="dashboardView">
-            <div id="navigation">
-                    
-            </div>
-            <table id="tabs" @click=${onTaskChoice}>
-                <th id="firstTab" class="tab">My tasks</th>
-                <th id="secondTab" class="tab">Create task</th>
-                <th id="thirdTab" class="tab">Assign task</th>
-                <th id="forthTab" class="tab">Completed tasks</th>
-            </table>
-            <hr>
-            <div id="container">
-            </div>
+            ${sessionStorage.sessionToken == undefined ? html `<h2>You need to <a id="sign-in" href="/signin">Login</a> or <a href="/signup"> Register</a> to access this page.</h2>`
+             : html`<div id="navigation">   
+                    </div>
+                    <table id="tabs" @click=${onTaskChoice}>
+                        <th id="firstTab" class="tab">My tasks</th>
+                        <th id="secondTab" class="tab">Create task</th>
+                        <th id="thirdTab" class="tab">Assign task</th>
+                        <th id="forthTab" class="tab">Completed tasks</th>
+                    </table>
+                    <hr>
+                    <div id="container">
+                </div>`}
         </section>
         `
     render(template, main);

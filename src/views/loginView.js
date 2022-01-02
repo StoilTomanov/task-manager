@@ -16,7 +16,7 @@ export function showSignIn() {
         </div>
         <div class="container-forms">
             <div class="form">
-                <form id="team-form" @submit=${onLogin}>
+                <form id="team-form">
                     <label for="team-name">Team name</label>
                     <input type="text" name="team-name" id="team-name" placeholder="Enter team name...">
                     <label for="identifier">Team ID</label>
@@ -28,8 +28,8 @@ export function showSignIn() {
             </div>
             <div class="form">
                 <form id="ind-form" @submit=${onLogin}>
-                    <label for="name">Username</label>
-                    <input type="text" name="name" id="name" placeholder="Enter username...">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Enter username...">
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" placeholder="Enter password...">
                     <input type="submit" value="Log In" class="submitBtn">
