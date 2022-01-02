@@ -16,10 +16,15 @@ window.logout = crud.logout;
 window.deleteUser = crud.deleteUser;
 
 page('/', showHome);
-page('/signin', showSignIn);
-page('/signup', showSignUp);
-page('/dashboard', showDashboard);
-page('/myteam', showTeam);
-page('/settings', showSettings);
+
+if (sessionStorage.sessionToken != undefined) {
+    page('/signin', showSignIn);
+    page('/signup', showSignUp);
+    page('/dashboard', showDashboard);
+    page('/myteam', showTeam);
+    page('/settings', showSettings);
+} else {
+    page.redirect('/');
+}
 
 page.start();
