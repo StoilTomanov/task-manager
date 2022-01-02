@@ -12,8 +12,10 @@ export function showHome() {
             </h1>
         </div>
         <div id="sign-case">
-            <a id="sign-in" href="/signin">Log in</a>
-            <p id="para">Don't have an account? <a href="/signup" id="sign-up">Register</a></p>
+            ${sessionStorage.sessionToken == undefined ? html`<a id="sign-in" href="/signin">Log in</a>
+            <p id="para">Don't have an account? <a href="/signup" id="sign-up">Register</a></p>` 
+            : html`<a id="sign-in" href="/dashboard">Dashboard</a>`}
+            
         </div>
     </section>
     `

@@ -18,13 +18,8 @@ window.deleteUser = crud.deleteUser;
 page('/', showHome);
 page('/signin', showSignIn);
 page('/signup', showSignUp);
-
-if (sessionStorage.sessionToken != undefined) {
-    page('/dashboard', showDashboard);
-    page('/myteam', showTeam);
-    page('/settings', showSettings);
-} else {
-    page.redirect('/');
-}
+page('/dashboard', showDashboard);
+page('/myteam', showTeam);
+page('/settings', showSettings);
 
 page.start();

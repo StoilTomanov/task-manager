@@ -21,7 +21,6 @@ export async function login(userData) {
             throw new Error(response.error);
         }
         const result = await response.json();
-        console.log(result);
         setUserData(result.username, result.sessionToken, result.objectId);
     } catch (err) {
         const error = await response.json();
@@ -44,7 +43,6 @@ export async function register(userData) {
     });
     const result = await response.json();
     setUserData(userData.username, result.sessionToken, result.objectId);
-    console.log(result);
 }
 
 export async function logout() {
@@ -63,7 +61,6 @@ export async function logout() {
         }
         const result = await repsonse.json();
         clearUserData();
-        console.log(result);
     } catch (err) {
         const error = await repsonse.json();
         alert(error.message);
@@ -82,5 +79,4 @@ export async function deleteUser() {
     });
     clearUserData();
     const result = await repsonse.json();
-    console.log(result);
 }

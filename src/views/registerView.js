@@ -7,7 +7,7 @@ export function showSignUp() {
     body.style.background = 'rgb(255, 255, 255)';
     const template = html `
     <section id="registerView">
-        <button class="backBtn" @click=${onBack}>&#8592</button>
+        ${sessionStorage.sessionToken == undefined ? html`<button class="backBtn" @click=${onBack}>&#8592</button>
         <h3>Register</h3>
         <div @click=${onTypeChoice}>
             <button class="type" id="team">Team</button>
@@ -43,7 +43,8 @@ export function showSignUp() {
         </div>
         <div class="container-signin">
             <p>Already have an accout?<a href="/signin"> Log in</a></p>
-        </div>
+        </div>`: html`<h2>Seems that you are logged in. Did you meant to go to <a id="sign-in" href="/dashboard">Dashboard</a>?</h2>`}
+        
     </section>
     `
     render(template, main);
