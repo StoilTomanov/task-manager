@@ -47,7 +47,7 @@ export async function logout(userData) {
     clearUserData();
 }
 
-export async function deleteUser(userData) {
+export async function deleteUser() {
     const repsonse = await fetch(endpoint.delete, {
         method: 'delete',
         headers: {
