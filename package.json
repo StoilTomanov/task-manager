@@ -21,6 +21,7 @@
     "dependencies": {
         "http-server": "^14.0.0",
         "lit-html": "^2.0.2",
-        "page": "^1.11.6"
+        "page": "^1.11.6",
+        "uniqid": "^5.4.0"
     }
 }
