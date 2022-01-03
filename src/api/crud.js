@@ -16,20 +16,21 @@ export async function login(userData) {
             },
             body: JSON.stringify(userData),
         });
-        if (response.status == 142) {
-            alert(response.error);
-            throw new Error(response.error);
+        if (response.status == 400) {
+            const result = await response.json();
+            alert(result.error);
+            throw new Error(result.error);
         }
         if (response.ok != true) {
-            alert(response.error);
-            throw new Error(response.error);
+            const result = await response.json();
+            alert(result.error);
+            throw new Error(result.error);
         }
         const result = await response.json();
         setUserData(result.username, result.sessionToken, result.objectId);
     } catch (err) {
-        const error = await response.json();
-        alert(error.message);
-        throw new Error(error.message);
+        alert(err.message);
+        throw new Error(err.message);
     }
 
 }
@@ -46,26 +47,27 @@ export async function register(userData) {
             },
             body: JSON.stringify(userData),
         });
-        if (response.status == 142) {
-            alert(response.error);
-            throw new Error(response.error);
+        if (response.status == 400) {
+            const result = await response.json();
+            alert(result.error);
+            throw new Error(result.error);
         }
         if (response.ok != true) {
-            alert(response.error);
-            throw new Error(response.error);
+            const result = await response.json();
+            alert(result.error);
+            throw new Error(result.error);
         }
         const result = await response.json();
         setUserData(userData.username, result.sessionToken, result.objectId);
     } catch (err) {
-        const error = await response.json();
-        alert(error.message);
-        throw new Error(error.message);
+        alert(err.message);
+        throw new Error(err.message);
     }
 }
 
 export async function logout() {
     try {
-        const repsonse = await fetch(endpoint.logout, {
+        const response = await fetch(endpoint.logout, {
             method: 'post',
             headers: {
                 'X-Parse-Application-Id': appID,
@@ -73,26 +75,27 @@ export async function logout() {
                 'X-Parse-Session-Token': sessionStorage.sessionToken,
             },
         });
-        if (response.status == 142) {
-            alert(response.error);
-            throw new Error(response.error);
+        if (response.status == 400) {
+            const result = await response.json();
+            alert(result.error);
+            throw new Error(result.error);
         }
-        if (repsonse.ok != true) {
-            alert(repsonse.error);
-            throw new Error(repsonse.error);
+        if (response.ok != true) {
+            const result = await response.json();
+            alert(result.error);
+            throw new Error(result.error);
         }
-        const result = await repsonse.json();
+        const result = await response.json();
         clearUserData();
     } catch (err) {
-        const error = await repsonse.json();
-        alert(error.message);
-        throw new Error(error.message);
+        alert(err.message);
+        throw new Error(err.message);
     }
 }
 
 export async function deleteUser() {
     try {
-        const repsonse = await fetch(endpoint.delete, {
+        const response = await fetch(endpoint.delete, {
             method: 'delete',
             headers: {
                 'X-Parse-Application-Id': appID,
@@ -101,10 +104,9 @@ export async function deleteUser() {
             },
         });
         clearUserData();
-        const result = await repsonse.json();
+        const result = await response.json();
     } catch (err) {
-        const error = await repsonse.json();
-        alert(error.message);
-        throw new Error(error.message);
+        alert(err.message);
+        throw new Error(err.message);
     }
 }

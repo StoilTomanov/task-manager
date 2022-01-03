@@ -22,7 +22,7 @@ export function showSignUp() {
                     <label for="identifier">Team ID</label>
                     <input type="text" name="identifier" id="identifier" placeholder="Enter team id...">
                     <label for="password">Password</label>
-                    <input type="password" name="name" id="password" placeholder="Enter password...">
+                    <input type="password" name="password" id="password" placeholder="Enter password...">
                     <label for="re-password">Repeat password</label>
                     <input type="password" name="re-password" id="re-password" placeholder="Repeat password...">
                     <input type="submit" value="Register" class="submitBtn">

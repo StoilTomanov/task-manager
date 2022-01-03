@@ -12,8 +12,12 @@ export async function onRegisterInd(ev) {
             throw new Error('Empty fields in the form!')
         }
     })
-    await register({ username: formData.username, password: formData.password });
-    page.redirect('/dashboard');
+    if (formData["re-password"] != formData.password) {
+        alert('Passwords must match!')
+    } else {
+        await register({ username: formData.username, password: formData.password });
+        page.redirect('/dashboard');
+    }
 
 }
 
@@ -27,9 +31,11 @@ export async function onRegisterTeam(ev) {
         if (v == false) {
             throw new Error('Empty fields in the form!');
         }
-    })
-
-    await register({ username: formData['team-name'], password: formData.password, teamName: formData['team-name'], teamId: formData.identifier, isTeam: false, });
-    page.redirect('/dashboard');
-
+    });
+    if (formData["re-password"] != formData.password) {
+        alert('Passwords must match!')
+    } else {
+        await register({ username: formData['team-name'], password: formData.password, teamName: formData['team-name'], teamId: formData.identifier, isTeam: true, });
+        page.redirect('/dashboard');
+    }
 }
