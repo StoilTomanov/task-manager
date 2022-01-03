@@ -27,7 +27,7 @@ export async function login(userData) {
             throw new Error(result.error);
         }
         const result = await response.json();
-        setUserData(result.username, result.sessionToken, result.objectId);
+        setUserData(result.username, result.sessionToken, result.objectId, result.isTeam);
     } catch (err) {
         alert(err.message);
         throw new Error(err.message);
@@ -58,7 +58,7 @@ export async function register(userData) {
             throw new Error(result.error);
         }
         const result = await response.json();
-        setUserData(userData.username, result.sessionToken, result.objectId);
+        setUserData(userData.username, result.sessionToken, result.objectId, result.isTeam);
     } catch (err) {
         alert(err.message);
         throw new Error(err.message);

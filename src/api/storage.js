@@ -1,7 +1,8 @@
-export function setUserData(username, sessionToken, objectId) {
+export function setUserData(username, sessionToken, objectId, isTeam) {
     sessionStorage.setItem('username', username);
     sessionStorage.setItem('sessionToken', sessionToken);
     sessionStorage.setItem('objectId', objectId);
+    sessionStorage.setItem('isTeam', isTeam);
 }
 
 export function getUserData() {
@@ -9,6 +10,7 @@ export function getUserData() {
         username: sessionStorage.username,
         sessionToken: sessionStorage.sessionStorage,
         objectId: sessionStorage.objectId,
+        isTeam: sessionStorage.isTeam,
     }
 }
 

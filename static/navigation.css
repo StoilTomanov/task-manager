@@ -16,6 +16,12 @@
     margin-left: 15px;
 }
 
+.img#notification {
+    width: 20px;
+    margin-top: 15%;
+    margin-left: 15px;
+}
+
 .img#logout {
     width: 20px;
     margin-top: 15%;
@@ -40,7 +46,7 @@ li a:hover {
     text-decoration: none;
     color: rgb(17, 196, 11);
     margin: 10px;
-    font-size: 110%;
+    font-size: 105%;
     transition: 0.2s;
 }
 
