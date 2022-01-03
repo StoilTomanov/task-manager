@@ -5,6 +5,9 @@ import { showSignIn } from './views/loginView.js';
 import { showSignUp } from './views/registerView.js';
 import { showSettings } from './views/settingsView.js';
 import { showTeam } from './views/teamView.js';
+import uuid from './lib/v4.js'
+
+console.log(uuid());
 
 export const main = document.getElementById('main');
 export const body = document.querySelector('html');
