@@ -19,8 +19,8 @@ export function showSignIn() {
                 <form id="team-form" @submit=${onLoginTeam}>
                     <label for="team-name">Team name</label>
                     <input type="text" name="team-name" id="team-name" placeholder="Enter team name...">
-                    <label for="identifier">Team ID</label>
-                    <input type="text" name="identifier" id="identifier" placeholder="Enter team id...">
+                    <!-- <label for="identifier">Team ID</label>
+                    <input type="text" name="identifier" id="identifier" placeholder="Enter team id..."> -->
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" placeholder="Enter password...">
                     <input type="submit" value="Log In" class="submitBtn">

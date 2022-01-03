@@ -29,7 +29,7 @@ export async function onLoginTeam(ev) {
         }
     })
 
-    await login({ username: formData['team-name'], password: formData.password, teamName: formData['team-name'], teamId: formData.identifier, isTeam: true, });
+    await login({ username: formData['team-name'], password: formData.password, teamName: formData['team-name'], isTeam: true, });
     page.redirect('/dashboard');
 
 }

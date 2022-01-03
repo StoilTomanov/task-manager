@@ -35,7 +35,7 @@ export async function onRegisterTeam(ev) {
     if (formData["re-password"] != formData.password) {
         alert('Passwords must match!')
     } else {
-        await register({ username: formData['team-name'], password: formData.password, teamName: formData['team-name'], teamId: formData.identifier, isTeam: true, });
+        await register({ username: formData['team-name'], password: formData.password, teamName: formData['team-name'], isTeam: true, });
         page.redirect('/dashboard');
     }
 }
