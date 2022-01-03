@@ -1,6 +1,6 @@
 import { body, main } from '../app.js';
 import { onBack } from '../controllers/backBtn.js';
-import { onLogin } from '../controllers/login.js';
+import { onLoginInd, onLoginTeam } from '../controllers/login.js';
 import { onTypeChoice } from '../controllers/typeBtn.js';
 import { html, render } from '../lib/lit-html.js';
 
@@ -16,7 +16,7 @@ export function showSignIn() {
         </div>
         <div class="container-forms">
             <div class="form">
-                <form id="team-form">
+                <form id="team-form" @submit=${onLoginTeam}>
                     <label for="team-name">Team name</label>
                     <input type="text" name="team-name" id="team-name" placeholder="Enter team name...">
                     <label for="identifier">Team ID</label>
@@ -27,7 +27,7 @@ export function showSignIn() {
                 </form>
             </div>
             <div class="form">
-                <form id="ind-form" @submit=${onLogin}>
+                <form id="ind-form" @submit=${onLoginInd}>
                     <label for="username">Username</label>
                     <input type="text" name="username" id="username" placeholder="Enter username...">
                     <label for="password">Password</label>

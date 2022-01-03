@@ -18,5 +18,3 @@ page('/myteam', showTeam);
 page('/settings', showSettings);
 
 page.start();
-
-//TODO: implement login and register for team accoutns
