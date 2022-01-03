@@ -16,6 +16,10 @@ export async function login(userData) {
             },
             body: JSON.stringify(userData),
         });
+        if (response.status == 142) {
+            alert(response.error);
+            throw new Error(response.error);
+        }
         if (response.ok != true) {
             alert(response.error);
             throw new Error(response.error);
@@ -31,18 +35,32 @@ export async function login(userData) {
 }
 
 export async function register(userData) {
-    const response = await fetch(endpoint.register, {
-        method: 'post',
-        headers: {
-            'X-Parse-Application-Id': appID,
-            'X-Parse-REST-API-Key': apiKey,
-            'X-Parse-Revocable-Session': 1,
-            'Content-Type': contentType,
-        },
-        body: JSON.stringify(userData),
-    });
-    const result = await response.json();
-    setUserData(userData.username, result.sessionToken, result.objectId);
+    try {
+        const response = await fetch(endpoint.register, {
+            method: 'post',
+            headers: {
+                'X-Parse-Application-Id': appID,
+                'X-Parse-REST-API-Key': apiKey,
+                'X-Parse-Revocable-Session': 1,
+                'Content-Type': contentType,
+            },
+            body: JSON.stringify(userData),
+        });
+        if (response.status == 142) {
+            alert(response.error);
+            throw new Error(response.error);
+        }
+        if (response.ok != true) {
+            alert(response.error);
+            throw new Error(response.error);
+        }
+        const result = await response.json();
+        setUserData(userData.username, result.sessionToken, result.objectId);
+    } catch (err) {
+        const error = await response.json();
+        alert(error.message);
+        throw new Error(error.message);
+    }
 }
 
 export async function logout() {
@@ -55,6 +73,10 @@ export async function logout() {
                 'X-Parse-Session-Token': sessionStorage.sessionToken,
             },
         });
+        if (response.status == 142) {
+            alert(response.error);
+            throw new Error(response.error);
+        }
         if (repsonse.ok != true) {
             alert(repsonse.error);
             throw new Error(repsonse.error);
@@ -69,14 +91,20 @@ export async function logout() {
 }
 
 export async function deleteUser() {
-    const repsonse = await fetch(endpoint.delete, {
-        method: 'delete',
-        headers: {
-            'X-Parse-Application-Id': appID,
-            'X-Parse-REST-API-Key': apiKey,
-            'X-Parse-Session-Token': sessionStorage.sessionToken,
-        },
-    });
-    clearUserData();
-    const result = await repsonse.json();
+    try {
+        const repsonse = await fetch(endpoint.delete, {
+            method: 'delete',
+            headers: {
+                'X-Parse-Application-Id': appID,
+                'X-Parse-REST-API-Key': apiKey,
+                'X-Parse-Session-Token': sessionStorage.sessionToken,
+            },
+        });
+        clearUserData();
+        const result = await repsonse.json();
+    } catch (err) {
+        const error = await repsonse.json();
+        alert(error.message);
+        throw new Error(error.message);
+    }
 }

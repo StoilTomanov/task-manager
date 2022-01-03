@@ -9,7 +9,7 @@ export async function onLoginInd(ev) {
 
     Object.values(formData).map(v => {
         if (v == false) {
-            throw new Error('Empty fields in the form!')
+            throw new Error('Empty fields in the form!');
         }
     })
 
@@ -25,7 +25,7 @@ export async function onLoginTeam(ev) {
 
     Object.values(formData).map(v => {
         if (v == false) {
-            throw new Error('Empty fields in the form!')
+            throw new Error('Empty fields in the form!');
         }
     })
 

@@ -2,7 +2,7 @@ import { body, main } from '../app.js';
 import { onBack } from '../controllers/backBtn.js';
 import { onTypeChoice } from '../controllers/typeBtn.js';
 import { html, render } from '../lib/lit-html.js';
-import { onRegister } from '../controllers/register.js';
+import { onRegisterInd, onRegisterTeam } from '../controllers/register.js';
 
 export function showSignUp() {
     body.style.background = 'rgb(255, 255, 255)';
@@ -16,7 +16,7 @@ export function showSignUp() {
         </div>
         <div class="container-forms">
             <div class="form">
-                <form id="team-form">
+                <form id="team-form" @submit=${onRegisterTeam}>
                     <label for="team-name">Team name</label>
                     <input type="text" name="team-name" id="team-name" placeholder="Enter team name...">
                     <label for="identifier">Team ID</label>
@@ -29,7 +29,7 @@ export function showSignUp() {
                 </form>
             </div>
             <div class="form">
-                <form id="ind-form" @submit=${onRegister}>
+                <form id="ind-form" @submit=${onRegisterInd}>
                     <label for="username">Username</label>
                     <input type="text" name="username" id="username" placeholder="Enter username...">
                     <label for="password">Password</label>
