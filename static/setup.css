@@ -1,77 +1,41 @@
-@font-face {
-    font-family: ext-font;
-    src: url(/fonts/Exo-Light.ttf);
+#org-set {
+    margin: 10%;
+    margin-left: 5%;
 }
 
-html {
-    font-family: ext-font, 'Maiandra GD', 'Courier New', Courier, monospace;
-    /* background: rgb(34, 199, 246);
-    background: radial-gradient(circle, rgba(34, 199, 246, 1) 0%, rgba(41, 170, 238, 1) 34%, rgb(4, 110, 197) 72%, rgba(36, 110, 192, 1) 100%); */
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#homeView {
+#org-set h1 {
+    font-size: 150%;
+    color: rgb(1, 34, 180);
     text-align: center;
 }
 
-#header {
+#org-set p {
+    font-size: 90%;
     text-align: center;
-    font-size: 270%;
 }
 
-img#logo {
-    height: 300px;
-    animation-duration: 0.7s;
-    animation-name: fadein;
-}
-
-@keyframes fadein {
-    from {
-        height: 0;
-    }
-    to {
-        height: 300px;
-    }
-}
-
-#sign-case a#sign-in {
-    text-decoration: none;
-    background-color: rgba(240, 32, 32, 0);
-    font-size: 110%;
-    border: 1px solid;
-    border-width: 2px;
-    border-radius: 6px;
-    border-color: rgb(207, 207, 207);
-    transition: 0.2s;
-    box-shadow: 2px 2px 3px;
-}
-
-#sign-case a#sign-in:hover {
+#org-set input {
     font-size: 120%;
-    border: 2px solid;
-    border-color: rgb(136, 255, 125);
-    transition: 0.2s;
-    box-shadow: 0px 0px 0px;
-    cursor: pointer;
+    margin-left: 15%;
+    border: 1px solid rgb(114, 113, 113);
+    text-align: center;
+    border-radius: 5px;
+    width: 70%;
 }
 
-#sign-up {
-    text-decoration: none;
-    transition: 0.2s;
-    color: rgb(255, 255, 255);
-}
-
-#sign-up:hover {
-    text-decoration: none;
-    font-size: 120%;
-    color: rgb(134, 255, 123);
+#org-set button {
+    color: rgb(25, 66, 248);
+    font-size: 350%;
+    border: 0px;
+    margin-top: 50px;
+    margin-left: 48%;
+    text-align: center;
+    background: rgb(255, 255, 255);
     transition: 0.2s;
 }
 
-#sign-case {
-    font-size: 120%;
-    margin-top: 170px;
+#org-set button:hover {
+    color: rgb(25, 248, 62);
+    font-size: 360%;
+    transition: 0.2s;
 }

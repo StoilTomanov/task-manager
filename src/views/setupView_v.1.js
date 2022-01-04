@@ -7,7 +7,7 @@ export function showSetup() {
 
     // const template =
     return html `
-    <section id="setting-up">
+    <section id="setting-up-1">
         <h2>Congrats! You are all set.</h2>
         <p>Your Team identifier is:</p>
         <div class="id-box">
