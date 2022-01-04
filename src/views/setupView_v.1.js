@@ -1,21 +1,18 @@
-import { body, main } from '../app.js';
-import { html, render } from '../lib/lit-html.js';
+import { body } from '../app.js';
+import { html } from '../lib/lit-html.js';
 
 export function showSetup() {
 
     body.style.background = 'rgb(255, 255, 255)';
 
-    // const template =
     return html `
-    <section id="setting-up-1">
-        <h2>Congrats! You are all set.</h2>
-        <p>Your Team identifier is:</p>
+    <section id="org-set">
+        <h1>Type your organization name (if any) so your team/teammates can find you easily.</h1>
+        <p>*Only members/teams who work with the same organization will be able to add you.</p>
         <div class="id-box">
-            <input id="next-id" type="text" readonly value="aa1cf008-24f2-40c7-9bb8-ba98e4f3b96a"><button>&#128203;</button>
+            <input type="text" id="org-name" placeholder="Organization name...">
         </div>
-        <p>Share this ID with your teammates so they can join your team.</p>
+        <button>&#10140;</button>
     </section>
         `
-        // render(template, main);
-
 }
