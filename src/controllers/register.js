@@ -1,6 +1,9 @@
 import { register } from "../api/crud.js";
 import { formHandler } from "../api/formHandler.js";
+import { main } from "../app.js";
+import { render } from "../lib/lit-html.js";
 import page from "../lib/page.mjs";
+import { showSetup } from "../views/setupView_v.2.js";
 
 export async function onRegisterInd(ev) {
     ev.preventDefault();
@@ -21,7 +24,6 @@ export async function onRegisterInd(ev) {
 
 }
 
-
 export async function onRegisterTeam(ev) {
     ev.preventDefault();
     const form = document.getElementById(ev.target.id);
@@ -36,6 +38,7 @@ export async function onRegisterTeam(ev) {
         alert('Passwords must match!')
     } else {
         await register({ username: formData['team-name'], password: formData.password, teamName: formData['team-name'], isTeam: true, });
-        page.redirect('/dashboard');
+        render(showSetup(), main)
+            // page.redirect('/dashboard');
     }
 }
