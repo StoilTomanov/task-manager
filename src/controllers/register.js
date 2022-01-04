@@ -2,8 +2,8 @@ import { register } from "../api/crud.js";
 import { formHandler } from "../api/formHandler.js";
 import { main } from "../app.js";
 import { render } from "../lib/lit-html.js";
-import page from "../lib/page.mjs";
-import { showSetup } from "../views/setupView_v.2.js";
+// import page from "../lib/page.mjs";
+import { showOgrSetup } from "../views/setupView_v.1.js";
 
 export async function onRegisterInd(ev) {
     ev.preventDefault();
@@ -18,8 +18,9 @@ export async function onRegisterInd(ev) {
     if (formData["re-password"] != formData.password) {
         alert('Passwords must match!')
     } else {
-        await register({ username: formData.username, password: formData.password });
-        page.redirect('/dashboard');
+        await register({ username: formData.username, password: formData.password, isTeam: false, });
+        render(showOgrSetup(), main);
+        // page.redirect('/dashboard');
     }
 
 }
@@ -38,7 +39,7 @@ export async function onRegisterTeam(ev) {
         alert('Passwords must match!')
     } else {
         await register({ username: formData['team-name'], password: formData.password, teamName: formData['team-name'], isTeam: true, });
-        render(showSetup(), main)
-            // page.redirect('/dashboard');
+        render(showOgrSetup(), main);
+        // page.redirect('/dashboard');
     }
 }

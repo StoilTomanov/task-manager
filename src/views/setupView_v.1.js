@@ -1,7 +1,8 @@
 import { body } from '../app.js';
+import { onNext, onDone } from '../controllers/nextBtn.js';
 import { html } from '../lib/lit-html.js';
 
-export function showSetup() {
+export function showOgrSetup() {
 
     body.style.background = 'rgb(255, 255, 255)';
 
@@ -12,7 +13,7 @@ export function showSetup() {
         <div class="id-box">
             <input type="text" id="org-name" placeholder="Organization name...">
         </div>
-        <button>&#10140;</button>
+        ${sessionStorage.isTeam == 'true' ? html`<button @click=${onNext}>&#10140;</button>`: html`<button id="done" @click=${onDone}>Done!</button>`}
     </section>
         `
 }
