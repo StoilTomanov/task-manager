@@ -18,7 +18,7 @@ export async function onRegisterInd(ev) {
     if (formData["re-password"] != formData.password) {
         alert('Passwords must match!')
     } else {
-        await register({ username: formData.username, password: formData.password, isTeam: false, });
+        await register({ username: formData.username.trim(), password: formData.password.trim(), isTeam: false, });
         render(showOgrSetup(), main);
         // page.redirect('/dashboard');
     }
@@ -38,7 +38,7 @@ export async function onRegisterTeam(ev) {
     if (formData["re-password"] != formData.password) {
         alert('Passwords must match!')
     } else {
-        await register({ username: formData['team-name'], password: formData.password, teamName: formData['team-name'], isTeam: true, });
+        await register({ username: formData['team-name'].trim(), password: formData.password.trim(), teamName: formData['team-name'].trim(), isTeam: true, });
         render(showOgrSetup(), main);
         // page.redirect('/dashboard');
     }

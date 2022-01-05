@@ -13,7 +13,7 @@ export async function onLoginInd(ev) {
         }
     })
 
-    await login({ username: formData.username, password: formData.password, isTeam: false, });
+    await login({ username: formData.username.trim(), password: formData.password.trim(), isTeam: false, });
     page.redirect('/dashboard');
 
 }
@@ -29,7 +29,7 @@ export async function onLoginTeam(ev) {
         }
     })
 
-    await login({ username: formData['team-name'], password: formData.password, teamName: formData['team-name'], isTeam: true, });
+    await login({ username: formData['team-name'].trim(), password: formData.password.trim(), teamName: formData['team-name'].trim(), isTeam: true, });
     page.redirect('/dashboard');
 
 }
