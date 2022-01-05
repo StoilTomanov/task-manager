@@ -95,7 +95,7 @@ export async function logout() {
 
 export async function deleteUser() {
     try {
-        const response = await fetch(endpoint.delete, {
+        const response = await fetch(endpoint.users + sessionStorage.objectId, {
             method: 'delete',
             headers: {
                 'X-Parse-Application-Id': appID,
@@ -103,8 +103,46 @@ export async function deleteUser() {
                 'X-Parse-Session-Token': sessionStorage.sessionToken,
             },
         });
+        if (response.status == 400) {
+            const result = await response.json();
+            alert(result.error);
+            throw new Error(result.error);
+        }
+        if (response.ok != true) {
+            const result = await response.json();
+            alert(result.error);
+            throw new Error(result.error);
+        }
         clearUserData();
         const result = await response.json();
+    } catch (err) {
+        alert(err.message);
+        throw new Error(err.message);
+    }
+}
+
+export async function updateUser(userData) {
+    try {
+        const response = await fetch(endpoint.users + sessionStorage.objectId, {
+            method: 'put',
+            headers: {
+                'X-Parse-Application-Id': appID,
+                'X-Parse-REST-API-Key': apiKey,
+                'X-Parse-Session-Token': sessionStorage.sessionToken,
+                'Content-Type': contentType,
+            },
+            body: JSON.stringify(userData),
+        });
+        if (response.status == 400) {
+            const result = await response.json();
+            alert(result.error);
+            throw new Error(result.error);
+        }
+        if (response.ok != true) {
+            const result = await response.json();
+            alert(result.error);
+            throw new Error(result.error);
+        }
     } catch (err) {
         alert(err.message);
         throw new Error(err.message);

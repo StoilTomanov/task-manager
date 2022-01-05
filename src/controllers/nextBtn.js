@@ -1,3 +1,4 @@
+import { updateUser } from "../api/crud.js";
 import { main } from "../app.js";
 import { render } from "../lib/lit-html.js";
 import page from "../lib/page.mjs";
@@ -17,7 +18,7 @@ export function onNext() {
     render(showSetup(), main);
 }
 
-export function onDone() {
+export async function onDone() {
     const orgName = document.getElementById('org-name');
     const identifier = document.getElementById('next-id');
     if (orgName != null || orgName != undefined) {
@@ -26,6 +27,8 @@ export function onDone() {
     if (identifier != null || identifier != undefined) {
         sessionStorage.setItem('teamIdentifier', identifier.value.trim());
     }
+
+    sessionStorage.teamIdentifier == null ? await updateUser({ organization: sessionStorage.organization }) : await updateUser({ organization: sessionStorage.organization.trim(), teamId: sessionStorage.teamIdentifier.trim() });
 
     page.redirect('/dashboard');
 }

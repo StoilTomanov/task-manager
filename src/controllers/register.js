@@ -2,7 +2,6 @@ import { register } from "../api/crud.js";
 import { formHandler } from "../api/formHandler.js";
 import { main } from "../app.js";
 import { render } from "../lib/lit-html.js";
-// import page from "../lib/page.mjs";
 import { showOgrSetup } from "../views/setupView_v.1.js";
 
 export async function onRegisterInd(ev) {
@@ -20,9 +19,7 @@ export async function onRegisterInd(ev) {
     } else {
         await register({ username: formData.username.trim(), password: formData.password.trim(), isTeam: false, });
         render(showOgrSetup(), main);
-        // page.redirect('/dashboard');
     }
-
 }
 
 export async function onRegisterTeam(ev) {
@@ -40,6 +37,5 @@ export async function onRegisterTeam(ev) {
     } else {
         await register({ username: formData['team-name'].trim(), password: formData.password.trim(), teamName: formData['team-name'].trim(), isTeam: true, });
         render(showOgrSetup(), main);
-        // page.redirect('/dashboard');
     }
 }
