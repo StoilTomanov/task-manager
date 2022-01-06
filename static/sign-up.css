@@ -138,18 +138,12 @@ button.backBtn {
     display: block;
 }
 
-.check p {
-    font-size: 90%;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
 .check-field {
     display: inline-block;
     border: 1px solid rgb(145, 142, 142);
     border-radius: 5px;
-    width: 17px;
-    height: 7px;
+    width: 20px;
+    height: 3px;
 }
 
 .check-field#f-1 {
@@ -157,7 +151,7 @@ button.backBtn {
 }
 
 .check-field#f-2 {
-    background-color: rgb(224, 93, 41);
+    background-color: rgb(240, 126, 81);
 }
 
 .check-field#f-3 {
@@ -169,7 +163,7 @@ button.backBtn {
 }
 
 .check-field#f-5 {
-    background-color: rgb(139, 202, 37);
+    background-color: rgb(158, 223, 54);
 }
 
 .check-field#f-6 {

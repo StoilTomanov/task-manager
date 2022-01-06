@@ -21,9 +21,8 @@ export function showSignUp() {
                     <label for="team-name">Team name</label>
                     <input type="text" name="team-name" id="team-name" placeholder="Enter team name...">
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" @keyup=${onPassCheck} placeholder="Enter password...">
+                    <input type="text" name="password" id="password" @keyup=${onPassCheck} placeholder="Enter password...">
                     <div class="check" >
-                        <p>Secure</p>
                         <div class="check-field" id="f-1"></div>
                         <div class="check-field" id="f-2"></div>
                         <div class="check-field" id="f-3"></div>
@@ -58,7 +57,7 @@ export function showSignUp() {
             </div>
         </div>
         <div class="container-signin">
-            <p>Already have an accout?<a href="/signin"> Log in</a></p>
+            <p>Already have an account?<a href="/signin"> Log in</a></p>
         </div>`: html`<h2>Seems that you are logged in. Did you meant to go to <a id="sign-in" href="/dashboard">Dashboard</a>?</h2>`}
         
     </section>
