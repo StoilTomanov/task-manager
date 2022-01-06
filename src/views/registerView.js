@@ -3,6 +3,7 @@ import { onBack } from '../controllers/backBtn.js';
 import { onTypeChoice } from '../controllers/typeBtn.js';
 import { html, render } from '../lib/lit-html.js';
 import { onRegisterInd, onRegisterTeam } from '../controllers/register.js';
+import { onPassCheck } from '../controllers/validation.js';
 
 export function showSignUp() {
     body.style.background = 'rgb(255, 255, 255)';
@@ -20,7 +21,16 @@ export function showSignUp() {
                     <label for="team-name">Team name</label>
                     <input type="text" name="team-name" id="team-name" placeholder="Enter team name...">
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Enter password...">
+                    <input type="password" name="password" id="password" @keyup=${onPassCheck} placeholder="Enter password...">
+                    <div class="check" >
+                        <p>Secure</p>
+                        <div class="check-field" id="f-1"></div>
+                        <div class="check-field" id="f-2"></div>
+                        <div class="check-field" id="f-3"></div>
+                        <div class="check-field" id="f-4"></div>
+                        <div class="check-field" id="f-5"></div>
+                        <div class="check-field" id="f-6"></div>
+                    </div>
                     <label for="re-password">Repeat password</label>
                     <input type="password" name="re-password" id="re-password" placeholder="Repeat password...">
                     <input type="submit" value="Register" class="submitBtn">
@@ -31,7 +41,16 @@ export function showSignUp() {
                     <label for="username">Username</label>
                     <input type="text" name="username" id="username" placeholder="Enter username...">
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Enter password...">
+                    <input type="password" name="password" id="password" @keyup=${onPassCheck} placeholder="Enter password...">
+                    <div class="check" >
+                        <p>Secure</p>
+                        <div class="check-field" id="f-1"></div>
+                        <div class="check-field" id="f-2"></div>
+                        <div class="check-field" id="f-3"></div>
+                        <div class="check-field" id="f-4"></div>
+                        <div class="check-field" id="f-5"></div>
+                        <div class="check-field" id="f-6"></div>
+                    </div>
                     <label for="re-password">Repeat password</label>
                     <input type="password" name="re-password" id="re-passwords" placeholder="Repeat password...">
                     <input type="submit" value="Register" class="submitBtn">

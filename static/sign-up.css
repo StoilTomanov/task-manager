@@ -134,6 +134,48 @@ button.backBtn {
     font-size: 60px;
 }
 
+.check {
+    display: block;
+}
+
+.check p {
+    font-size: 90%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.check-field {
+    display: inline-block;
+    border: 1px solid rgb(145, 142, 142);
+    border-radius: 5px;
+    width: 17px;
+    height: 7px;
+}
+
+.check-field#f-1 {
+    background-color: rgb(243, 1, 1);
+}
+
+.check-field#f-2 {
+    background-color: rgb(224, 93, 41);
+}
+
+.check-field#f-3 {
+    background-color: rgb(226, 167, 5)
+}
+
+.check-field#f-4 {
+    background-color: rgb(231, 216, 3);
+}
+
+.check-field#f-5 {
+    background-color: rgb(139, 202, 37);
+}
+
+.check-field#f-6 {
+    background-color: rgb(1, 240, 13);
+}
+
 @media screen and (max-width: 600px) {
     .container-forms input {
         width: 90%;
