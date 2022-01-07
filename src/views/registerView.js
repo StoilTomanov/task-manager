@@ -19,10 +19,10 @@ export function showSignUp() {
             <div class="form">
                 <form id="team-form" @submit=${onRegisterTeam}>
                     <label for="team-name">Team name</label>
-                    <input type="text" name="team-name" id="team-name" placeholder="Enter team name...">
+                    <input type="text" name="team-name" id="team-name" autofocus placeholder="Enter team name...">
                     <label for="password">Password</label>
-                    <input type="text" name="password" id="password" @keyup=${onPassCheck} placeholder="Enter password...">
-                    <div class="check" >
+                    <input type="password" name="password" id="password" @keyup=${onPassCheck} placeholder="Enter password...">
+                    <div class="check" id="team-check">
                         <div class="check-field" id="f-1"></div>
                         <div class="check-field" id="f-2"></div>
                         <div class="check-field" id="f-3"></div>
@@ -38,11 +38,10 @@ export function showSignUp() {
             <div class="form">
                 <form id="ind-form" @submit=${onRegisterInd}>
                     <label for="username">Username</label>
-                    <input type="text" name="username" id="username" placeholder="Enter username...">
+                    <input type="text" name="username" id="username" autofocus placeholder="Enter username...">
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" @keyup=${onPassCheck} placeholder="Enter password...">
-                    <div class="check" >
-                        <p>Secure</p>
+                    <div class="check" id="ind-check">
                         <div class="check-field" id="f-1"></div>
                         <div class="check-field" id="f-2"></div>
                         <div class="check-field" id="f-3"></div>
