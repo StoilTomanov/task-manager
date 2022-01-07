@@ -31,10 +31,10 @@ export function showMyTasks() {
         <tbody id="table-body">
             <tr>
                 <td>
-                    <input type="text" readonly value="17.12.2021">
+                    <input type="text" readonly value="12.17.2021">
                 </td>
                 <td>
-                    <input type="text" readonly value="21.01.2022">
+                    <input type="text" readonly value="01.21.2022">
                 </td>
                 <td>
                     <input type="text" readonly value="TODO">
@@ -46,17 +46,19 @@ export function showMyTasks() {
                     <input type="text" readonly value="In Progress">
                 </td>
                 <td>
-                    <button class="startBtn">Start</button>
-                    <button class="deleteBtn">Delete</button>
-                    <button class="finishBtn">Finish</button>
+                    <div class="actions">
+                        <button class="startBtn">Start</button>
+                        <button class="deleteBtn">Delete</button>
+                        <button class="finishBtn">Finish</button>
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type="text" readonly value="17.12.2021">
+                    <input type="text" readonly value="12.17.2021">
                 </td>
                 <td>
-                    <input type="text" readonly value="21.01.2022">
+                    <input type="text" readonly value="01.21.2022">
                 </td>
                 <td>
                     <input type="text" readonly value="TODO">
@@ -68,9 +70,11 @@ export function showMyTasks() {
                     <input type="text" readonly value="In Progress">
                 </td>
                 <td>
-                    <button class="startBtn">Start</button>
-                    <button class="deleteBtn">Delete</button>
-                    <button class="finishBtn">Finish</button>
+                    <div class="actions">
+                        <button class="startBtn">Start</button>
+                        <button class="deleteBtn">Delete</button>
+                        <button class="finishBtn">Finish</button>
+                    </div>
                 </td>
             </tr>
         </tbody>

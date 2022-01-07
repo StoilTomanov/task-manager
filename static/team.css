@@ -1,5 +1,5 @@
 #main section#teamView {
-    margin-left: 12%;
+    margin-left: 14%;
     margin-right: 2%;
 }
 
@@ -19,7 +19,7 @@ button.membersBtn {
     font-family: ext-font, 'Maiandra GD', 'Courier New', Courier, monospace;
     background: none;
     cursor: pointer;
-    border: 2px solid;
+    border: 0px solid;
     border-radius: 8px;
     border-color: rgb(43, 137, 226);
     width: 180px;
@@ -27,21 +27,29 @@ button.membersBtn {
 }
 
 button#addMemeber {
+    background-color: rgb(182, 248, 176);
+    transition: 0.2s;
     margin-right: 25%;
+    font-size: 100%;
+    font-weight: bold;
 }
 
 button#removeMember {
+    background-color: rgb(248, 165, 165);
+    transition: 0.2s;
     margin-right: 2%;
+    font-size: 100%;
+    font-weight: bold;
 }
 
 button#addMemeber:hover {
     transition: 0.2s;
-    background-color: rgb(148, 248, 139);
+    background-color: rgb(112, 247, 100);
 }
 
 button#removeMember:hover {
     transition: 0.2s;
-    background-color: rgb(248, 141, 141);
+    background-color: rgb(240, 97, 97);
 }
 
 button#addMemeber:active {
@@ -52,6 +60,18 @@ button#addMemeber:active {
 button#removeMember:active {
     background-color: rgb(161, 203, 250);
     transition: 0.3s;
+}
+
+
+/* tfoot.totalMembers {
+    position: fixed;
+    width: 84.8%;
+} */
+
+div#members {
+    border: 2px solid rgb(199, 211, 230);
+    border-radius: 15px;
+    padding: 10px;
 }
 
 @media screen and (max-width: 600px) {

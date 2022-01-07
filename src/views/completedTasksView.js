@@ -21,7 +21,7 @@ export function showCompletedTasks() {
         <tbody id="table-body">
             <tr>
                 <td>
-                    <input type="text" readonly value="21.01.2022">
+                    <input type="text" readonly value="01.21.2022">
                 </td>
                 <td>
                     <input type="text" readonly value="TODO">
@@ -38,7 +38,7 @@ export function showCompletedTasks() {
             </tr>
             <tr>
                 <td>
-                    <input type="text" readonly value="21.01.2022">
+                    <input type="text" readonly value="01.21.2022">
                 </td>
                 <td>
                     <input type="text" readonly value="TODO">

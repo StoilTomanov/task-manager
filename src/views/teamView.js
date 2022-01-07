@@ -12,13 +12,10 @@ export function showTeam() {
         : html`<div id="navigation">
                     
                     </div>
-                    <div id="memberAction">
-                        <button class="membersBtn" id="addMemeber">Add Member</button>
-                        <button class="membersBtn" id="removeMember">Remove Member</button>
-                    </div>
+                    
                     <div id="members">
                         <table>
-                            <thead>
+                            <thead id="theader">
                                 <tr>
                                     <th>Username</th>
                                     <th>Position</th>
@@ -37,7 +34,7 @@ export function showTeam() {
                                     <td>7 Tasks</td>
                                 </tr>
                             </tbody>
-                            <tfoot>
+                            <tfoot class="totalMembers">
                                 <tr>
                                     <td colspan="3">
                                         Total Members: 2
@@ -47,6 +44,10 @@ export function showTeam() {
             
                         </table>
                     </div>`}
+            <div id="memberAction">
+                <button class="membersBtn" id="addMemeber">Add Member</button>
+                <button class="membersBtn" id="removeMember">Remove Member</button>
+            </div>
     </section>
         `
     render(template, main);

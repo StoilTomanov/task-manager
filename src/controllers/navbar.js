@@ -17,7 +17,7 @@ export function toggleNav(ev) {
             navigation.style.width = '35%';
             main.style.marginLeft = "0%";
         } else if (window.screen.width > 600) {
-            navigation.style.width = '10%';
+            navigation.style.width = '12%';
             main.style.marginLeft = "0%";
         }
     } else if (ev.target.id == 'toggleClose') {
@@ -30,7 +30,7 @@ export function toggleNav(ev) {
             main.style.marginLeft = "-42%";
         } else if (window.screen.width > 600) {
             navigation.style.width = '3.3%';
-            main.style.marginLeft = "-8%";
+            main.style.marginLeft = "-10%";
         }
     }
 }

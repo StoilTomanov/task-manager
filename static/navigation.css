@@ -55,7 +55,7 @@ li a:hover {
     display: inline;
     float: left;
     position: fixed;
-    width: 10%;
+    width: 12%;
     height: 100%;
     z-index: 1;
     top: 0;
@@ -65,7 +65,7 @@ li a:hover {
 button#toggleOpen {
     color: black;
     position: fixed;
-    left: 13px;
+    left: 8px;
     top: 3px;
     cursor: pointer;
     z-index: 1;
@@ -85,7 +85,7 @@ button#toggleOpen:hover {
 button#toggleClose {
     color: black;
     position: fixed;
-    left: 120px;
+    left: 122px;
     top: 3px;
     cursor: pointer;
     z-index: 1;

@@ -1,8 +1,12 @@
+#main section#settingsView {
+    margin-left: 3%;
+}
+
 input[type="checkbox"] {
     position: relative;
     width: 60px;
     height: 15px;
-    left: 12%;
+    left: 11.9%;
     top: 5px;
     display: inline-block;
     transition: 0.2s;
@@ -75,7 +79,7 @@ label.toggle-txt {
     position: relative;
     left: 10%;
     margin-top: 1.5%;
-    margin-left: 25%;
+    margin-left: 23%;
     border: 1px solid rgb(87, 87, 87);
     box-shadow: 1px 1px 2px 1px;
     border-radius: 7px;
@@ -93,19 +97,19 @@ label.toggle-txt {
 }
 
 #btns button#del-btn {
-    background: rgb(250, 68, 62);
+    background: rgb(248, 98, 93);
     transition: 0.2s;
 }
 
 #btns button#save-btn:hover {
     cursor: pointer;
-    background: rgb(255, 255, 255);
+    background: rgb(17, 243, 47);
     transition: 0.2s;
 }
 
 #btns button#del-btn:hover {
     cursor: pointer;
-    background: rgb(255, 255, 255);
+    background: rgb(231, 22, 22);
     transition: 0.2s;
 }
 
