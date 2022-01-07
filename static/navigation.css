@@ -103,6 +103,18 @@ button#toggleClose:hover {
     color: rgb(91, 253, 76);
 }
 
+p#greet {
+    position: fixed;
+    left: 15px;
+    top: 92%;
+    color: rgb(255, 255, 255);
+    font-size: 105%;
+}
+
+p span#greet-name {
+    color: rgb(0, 255, 34);
+}
+
 @media screen and (max-width: 600px) {
     #navigation nav {
         width: 50%;

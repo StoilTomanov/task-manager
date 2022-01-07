@@ -12,6 +12,7 @@ export function navigationBar() {
         <li class="navLi"><img src="./img/notification.png" alt="notification" class="img" id="notification"><a href="javascript:void(0)">Notifications</a></li>
         <li class="navLi"><img src="./img/settings.png" alt="settings" class="img" id="settings"><a href="/settings">Settings</a></li>
         <li class="navLi"><img src="./img/logout.png" alt="logout" class="img" id="logout"><a href="javascript:void(0)" @click=${onLogout}>Logout</a></li>
+        <p id="greet">Hello, <span id="greet-name">${sessionStorage.username}</span></p>
     </nav>
     `
 }
