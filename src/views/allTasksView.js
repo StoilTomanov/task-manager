@@ -1,7 +1,8 @@
+import { getAllTasks } from '../api/tasks.js';
 import { html } from '../lib/lit-html.js';
 
-export async function showAllTasks() {
-
+export function showAllTasks(results) {
+    console.log(results);
     return html `
     <table class="table-tasks">
         <thead id="table-head">
@@ -29,21 +30,22 @@ export async function showAllTasks() {
             </div>
         </thead>
         <tbody id="table-body">
+            ${results.map(r => html`
             <tr>
                 <td>
-                    <input type="text" readonly value='sth'>
+                    <input type="text" readonly value=${new Date(r.assignedOn.iso).toLocaleDateString(undefined,{ year: 'numeric', month: 'long', day: '2-digit' })}>
                 </td>
                 <td>
-                    <input type="text" readonly value='sth'>
+                    <input type="text" readonly value=${new Date(r.assignedOn.iso).toLocaleDateString(undefined,{ year: 'numeric', month: 'long', day: '2-digit' })}>
                 </td>
                 <td>
-                    <input type="text" readonly value='sth'>
+                    <input type="text" readonly value=${r.description}>
                 </td>
                 <td>
-                    <input type="text" readonly value='sth'>
+                    <input type="text" readonly value=${r.assignedTo}>
                 </td>
                 <td>
-                    <input type="text" readonly value='sth'>
+                    <input type="text" readonly value=${r.status}>
                 </td>
                 <td>
                     <div class="actions">
@@ -51,6 +53,7 @@ export async function showAllTasks() {
                     </div>
                 </td>
             </tr>
+            `)}
     </tbody>
 </table>
 `

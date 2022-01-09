@@ -1,9 +1,9 @@
 import { endpoint } from "./endpoints.js";
 import { clearUserData, setUserData } from "./storage.js";
 
-const appID = 'ojCxQpaTc8ay4TdoBxRNrrdkBpAANgEGFjJjKVia';
-const apiKey = '71aS9FE1hAsE9bN526INsJhpRbwKjBxxI5fX7p68';
-const contentType = 'application/json';
+export const appID = 'ojCxQpaTc8ay4TdoBxRNrrdkBpAANgEGFjJjKVia';
+export const apiKey = '71aS9FE1hAsE9bN526INsJhpRbwKjBxxI5fX7p68';
+export const contentType = 'application/json';
 
 export async function login(userData) {
     try {
