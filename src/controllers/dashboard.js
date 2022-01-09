@@ -19,9 +19,14 @@ export function onTaskChoice(ev) {
 
 }
 
-function onMyTask() {
+export function onMyTask() {
     render(showMyTasks(), document.getElementById('container'));
 }
+
+export function onAllTasks() {
+    render(showAssignTask(), document.getElementById('container'));
+}
+
 export function onCreateTask() {
     render(showCreateTask(), document.getElementById('container'));
 }

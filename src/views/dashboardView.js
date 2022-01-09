@@ -13,7 +13,7 @@ export function showDashboard() {
              : html`<div id="navigation">   
                     </div>
                     <table id="tabs" @click=${onTaskChoice}>
-                        <th id="firstTab" class="tab">My tasks</th>
+                        <th id="firstTab" class="tab">${sessionStorage.isTeam == 'true' ? html`All tasks` : html`My tasks`}</th>
                         <th id="secondTab" class="tab">Create task</th>
                         ${sessionStorage.isTeam == 'true' ? html`<th id="thirdTab" class="tab">Assign task</th>` : null}
                         <th id="forthTab" class="tab">Completed tasks</th>
