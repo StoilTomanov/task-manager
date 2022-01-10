@@ -4,7 +4,7 @@ import { showCompletedTasks } from '../views/completedTasksView.js';
 import { showCreateTask } from '../views/createTaskView.js';
 import { showMyTasks } from '../views/myTasksView.js';
 import { showAllTasks } from '../views/allTasksView.js';
-import { getAllTasks, getCompletedTasks } from '../api/tasks.js';
+import { getAllTasks, getCompletedTasks, getUnassignedTasks } from '../api/tasks.js';
 
 /*
     Status: 
@@ -44,8 +44,9 @@ export async function onAllTasks() {
 export function onCreateTask() {
     render(showCreateTask(), document.getElementById('container'));
 }
-export function onAssignTask() {
-    render(showAssignTask(), document.getElementById('container'));
+export async function onAssignTask() {
+    const unassignedTasks = await getUnassignedTasks();
+    render(showAssignTask(unassignedTasks.results), document.getElementById('container'));
 }
 export async function onCompletedTasks() {
     const completedTasks = await getCompletedTasks();

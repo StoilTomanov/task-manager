@@ -1,8 +1,9 @@
 import { html } from '../lib/lit-html.js';
 
-export function showAssignTask() {
+export function showAssignTask(results) {
 
     return html `
+    ${results.length == 0 ? html`<h1 style="text-align: center">No tasks available</h1>`: html`
     <table class="table-tasks">
         <thead id="table-head">
             <th>
@@ -19,15 +20,16 @@ export function showAssignTask() {
             </th>
         </thead>
         <tbody id="table-body">
+            ${results.map( r => html`
             <tr>
                 <td>
-                    <input type="text" readonly value="01.21.2022">
+                    <input type="text" readonly value=${r.expectedOn}>
                 </td>
                 <td>
-                    <input type="text" readonly value="TODO">
+                    <input type="text" readonly value=${r.description}>
                 </td>
                 <td>
-                    <input type="text" readonly value="In Progress">
+                    <input type="text" readonly value=${r.status}>
                 </td>
                 <td >
                     <div class="actions">
@@ -36,24 +38,9 @@ export function showAssignTask() {
                     </div>
                 </td>
             </tr>
-            <tr>
-                <td>
-                    <input type="text" readonly value="01.21.2022">
-                </td>
-                <td>
-                    <input type="text" readonly value="TODO">
-                </td>
-                <td>
-                    <input type="text" readonly value="In Progress">
-                </td>
-                <td>
-                    <div class="actions">
-                        <button class="assignBtn">Assign</button>
-                        <button class="deleteBtn">Delete</button>
-                    </div>
-                </td>
-            </tr>
+            `)}
         </tbody>
     </table>
+    `}
     `
 }
