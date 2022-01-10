@@ -1,10 +1,46 @@
-import { apiKey, appID } from "./crud.js";
+import { apiKey, appID, contentType } from "./crud.js";
 import { endpoint } from "./endpoints.js";
 
-export async function getAllTasks() {
+export async function createTask(data) {
+    try {
+        const response = await fetch(endpoint.create, {
+            method: 'post',
+            headers: {
+                'X-Parse-Application-Id': appID,
+                'X-Parse-REST-API-Key': apiKey,
+                'Content-Type': contentType,
+            },
+            body: JSON.stringify(data),
+        });
+        if (response.status == 400) {
+            const result = await response.json();
+            alert(result.error);
+            throw new Error(result.error);
+        }
+        if (response.ok != true) {
+            const result = await response.json();
+            alert(result.error);
+            throw new Error(result.error);
+        }
+
+        return response.json();
+
+    } catch (err) {
+        alert(err.message);
+        throw new Error(err.message);
+    }
+
+}
+
+export async function getAllTasks() { // use JSONArray as the below one have an AND operator in the query
     const query = {
+        "$or": [{
+            "status": {
+                "$ne": "Completed",
+            }
+        }, ],
         "status": {
-            "$ne": "Completed"
+            "$ne": "Unassigned",
         }
     }
 

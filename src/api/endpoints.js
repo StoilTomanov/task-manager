@@ -6,4 +6,5 @@ export const endpoint = {
     logout: host + '/logout',
     users: host + '/users/',
     tasksData: host + '/classes/Tasks?where=',
+    create: host + '/classes/Tasks'
 }

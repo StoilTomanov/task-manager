@@ -2,7 +2,7 @@ import { html } from '../lib/lit-html.js';
 
 export function showCompletedTasks(results) {
 
-    return html `
+    return html `${results.length == 0 ? html`<h1 style="text-align: center">No tasks available</h1>` : html`
     <table class="table-tasks">
         <thead id="table-head">
             <th>
@@ -22,7 +22,7 @@ export function showCompletedTasks(results) {
             ${results.map( r => html`
             <tr>
                 <td>
-                    <input type="text" readonly value=${new Date(r.completedOn.iso).toLocaleDateString(undefined,{ year: 'numeric', month: 'long', day: '2-digit' })}>
+                    <input type="text" readonly value=${r.completedOn}>
                 </td>
                 <td>
                     <input type="text" readonly value=${r.description}>
@@ -40,5 +40,5 @@ export function showCompletedTasks(results) {
             `)}
         </tbody>
     </table>
-    `
+    `}`
 }
