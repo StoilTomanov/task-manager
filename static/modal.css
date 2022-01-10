@@ -1,8 +1,3 @@
-#main {
-    /* below blur should be applied with an event */
-    filter: blur(1px);
-}
-
 .modal {
     display: block;
     position: fixed;
@@ -14,16 +9,82 @@
     overflow: auto;
     transition: 0.2s;
     opacity: 1;
-    background-color: rgba(0, 0, 0, 0.479);
+    background-color: rgba(119, 119, 119, 0.753);
 }
 
 .modal-container {
+    background-color: rgba(226, 226, 226, 0.911);
     position: relative;
-    height: 70%;
-    width: 60%;
-    left: 20%;
+    height: 60%;
+    width: 40%;
+    left: 30%;
     top: 10%;
-    border: 3px solid rgba(19, 112, 235, 0.575);
-    border-radius: 30px;
+    border: 3px solid rgba(8, 131, 247, 0.671);
+    border-radius: 25px;
+    box-shadow: 4px 5px 10px 7px rgb(104, 104, 104);
     text-align: center;
+}
+
+#modal-form h2 {
+    position: relative;
+    top: 20px;
+}
+
+#modal-form select {
+    display: block;
+    position: relative;
+    left: 20%;
+    top: 90px;
+}
+
+#modal-form select {
+    padding: 5px;
+    width: 60%;
+    text-align: center;
+    border: 0px;
+    color: rgb(253, 254, 255);
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: rgba(50, 134, 182, 0.377);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#modal-form select:hover {
+    color: rgba(50, 134, 182, 0.808);
+    background-color: rgb(252, 252, 252);
+    transition: 0.2s;
+}
+
+#modal-form option {
+    align-items: center;
+    background: rgba(213, 234, 248, 0.61);
+    color: rgb(0, 0, 0);
+}
+
+#modal-form input {
+    position: relative;
+    font-weight: 600;
+    top: 220px;
+    width: 17%;
+    padding: 5px;
+    margin: 10%;
+    transition: 0.3s;
+    border: 0px;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+}
+
+#modal-form input:hover {
+    background-color: rgba(57, 119, 153, 0.678);
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#modal-form label {
+    position: relative;
+    font-weight: 600;
+    top: 80px;
+    width: 10%;
 }
