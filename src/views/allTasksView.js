@@ -1,4 +1,3 @@
-import { getAllTasks } from '../api/tasks.js';
 import { html } from '../lib/lit-html.js';
 
 export function showAllTasks(results) {

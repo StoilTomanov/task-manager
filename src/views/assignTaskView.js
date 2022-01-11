@@ -1,7 +1,8 @@
 import { html } from '../lib/lit-html.js';
+import { loadModal } from './modals.js';
 
 export function showAssignTask(results) {
-
+    console.log(results);
     return html `
     ${results.length == 0 ? html`<h1 style="text-align: center">No tasks available</h1>`: html`
     <table class="table-tasks">
@@ -33,7 +34,7 @@ export function showAssignTask(results) {
                 </td>
                 <td >
                     <div class="actions">
-                        <button class="assignBtn">Assign</button>
+                        <button class="assignBtn" data-id=${r.objectId} @click=${loadModal}>Assign</button>
                         <button class="deleteBtn">Delete</button>
                     </div>
                 </td>
