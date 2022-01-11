@@ -1,19 +1,26 @@
+import { getAllUsers } from '../api/crud.js';
+import { getUnassignedTasks } from '../api/tasks.js';
+import { onAssignTask } from '../controllers/assign.js';
 import { html, render } from '../lib/lit-html.js';
+import { showAssignTask } from './assignTaskView.js';
+
+const allUsersList = await getAllUsers();
+console.log(allUsersList.results);
 
 const modal = {
-    assignModal: html `
+        assignModal: html `
     <div id="navigation">   
     </div>
     <div id="assignModal" class="modal">
         <div class="modal-container">
-            <form id="modal-form">
+            <form id="modal-form" @submit=${onAssignTask}>
                 <h2>Assign task</h2>
                 <label for="assignTo">Assign to:</label>
                 <select name="emp-username" id="emp-username">
                     <option></option>
-                    <option value="TestUser1">TestUser1 | <span>8 tasks</span></option>
-                    <option value="TestUser1">TestUser2 | <span>5 tasks</span></option>
-                    <option value="TestUser1">TestUser3 | <span>7 tasks</span></option>
+                    ${allUsersList.results.map( r => html`
+                    <option value=${r.username}>${r.username} | <span>8 tasks</span></option>
+                    `)}
                 </select>
                 <div>
                     <input type="submit" name="confirm" id="submit-confirm" value="Confirm">
@@ -36,7 +43,7 @@ const modal = {
     `
 }
 
-export function loadModal(ev) {
+export async function loadModal(ev) {
 
     if (ev.target.dataset.id != '') {
         if (ev.target.textContent == 'Assign') {
@@ -48,6 +55,7 @@ export function loadModal(ev) {
     }
 }
 
-function closeModal(ev) {
-    document.getElementById(ev.target.dataset.type).style.display = 'none';
+async function closeModal(ev) {
+console.log('works');
+//Close the modals
 }

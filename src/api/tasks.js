@@ -134,3 +134,32 @@ export async function getUnassignedTasks() {
         throw new Error(err.message);
     }
 }
+
+export async function updateTask(taskId) {
+
+    try {
+        const response = await fetch(endpoint.update + taskId, {
+            method: 'put',
+            headers: {
+                'X-Parse-Application-Id': appID,
+                'X-Parse-REST-API-Key': apiKey,
+                'Content-Type': contentType,
+            },
+        });
+
+        if (response.status == 400) {
+            const result = await response.json();
+            alert(result.error);
+            throw new Error(result.error);
+        }
+        if (response.ok != true) {
+            const result = await response.json();
+            alert(result.error);
+            throw new Error(result.error);
+        }
+        // return response.json();
+    } catch (err) {
+        alert(err.message);
+        throw new Error(err.message);
+    }
+}
