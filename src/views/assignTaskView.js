@@ -34,8 +34,8 @@ export function showAssignTask(results) {
                 </td>
                 <td >
                     <div class="actions">
-                        <button class="assignBtn" data-id=${r.objectId} @click=${loadModal}>Assign</button>
-                        <button class="deleteBtn">Delete</button>
+                        <button class="assignBtn"fk data-id=${r.objectId} @click=${loadModal}>Assign</button>
+                        <button class="deleteBtn" @click=${loadModal}>Delete</button>
                     </div>
                 </td>
             </tr>

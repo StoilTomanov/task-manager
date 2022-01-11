@@ -11,7 +11,7 @@ export function showCreateTask() {
             <label for="expected-date">Expected date</label>
             <input type="date" id="calendar">
             <input id="submit-btn" type="submit" value="Create">
-            <p id="message" class="notify">Task has been created. Check <span>All tasks</span> section.</p>
+            <p id="message" class="notify">Task has been created. Check <span>Assign task</span> section to assign this task.</p>
         </form>
     </div>
     `

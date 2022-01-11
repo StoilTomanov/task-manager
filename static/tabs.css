@@ -120,15 +120,15 @@ table button.finishBtn:active {
 
 form#create-task-form {
     text-align: center;
-    margin-left: 28%;
+    margin-left: 25.5%;
     display: block;
-    width: 40.8%;
+    width: 45%;
     box-shadow: 4px 4px 15px -4px rgb(187, 186, 186);
     border: 1px solid;
     border-radius: 5px;
     border-color: rgb(216, 216, 216);
     margin-top: 5%;
-    height: 480px;
+    height: 500px;
 }
 
 form#create-task-form label {
