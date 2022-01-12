@@ -5,6 +5,7 @@ import { showCreateTask } from '../views/createTaskView.js';
 import { showMyTasks } from '../views/myTasksView.js';
 import { showAllTasks } from '../views/allTasksView.js';
 import { getAllTasks, getCompletedTasks, getUnassignedTasks } from '../api/tasks.js';
+import { getAllUsers } from '../api/crud.js';
 
 /*
     Status: 
@@ -45,8 +46,11 @@ export function onCreateTask() {
     render(showCreateTask(), document.getElementById('container'));
 }
 export async function onAssignTask() {
-    const unassignedTasks = await getUnassignedTasks();
-    render(showAssignTask(unassignedTasks.results), document.getElementById('container'));
+    if (sessionStorage.organization) {
+        const teamMembers = await getAllUsers();
+        const unassignedTasks = await getUnassignedTasks();
+        render(showAssignTask(unassignedTasks.results, teamMembers.results), document.getElementById('container'));
+    }
 }
 export async function onCompletedTasks() {
     const completedTasks = await getCompletedTasks();

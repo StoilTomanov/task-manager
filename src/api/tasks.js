@@ -135,7 +135,7 @@ export async function getUnassignedTasks() {
     }
 }
 
-export async function updateTask(taskId) {
+export async function updateTask(data, taskId) {
 
     try {
         const response = await fetch(endpoint.update + taskId, {
@@ -145,6 +145,7 @@ export async function updateTask(taskId) {
                 'X-Parse-REST-API-Key': apiKey,
                 'Content-Type': contentType,
             },
+            body: JSON.stringify(data),
         });
 
         if (response.status == 400) {
