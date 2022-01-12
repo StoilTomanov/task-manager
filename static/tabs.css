@@ -42,6 +42,11 @@ table button.assignBtn:hover {
     background-color: rgb(39, 218, 39);
 }
 
+table button.assignBtn:active {
+    background-color: rgb(156, 245, 156);
+    box-shadow: 0px 0px 0px 0px rgb(197, 197, 197);
+}
+
 table button.startBtn {
     background-color: rgb(156, 245, 156);
     box-shadow: 2px 2px 1px 1px rgb(197, 197, 197);
