@@ -27,7 +27,7 @@ export async function login(userData) {
             throw new Error(result.error);
         }
         const result = await response.json();
-        setUserData(result.username, result.sessionToken, result.objectId, userData['isTeam'], result.organization);
+        setUserData(result.username, result.sessionToken, result.objectId, userData['isTeam'], result.organization, result.teamId);
     } catch (err) {
         alert(err.message);
         throw new Error(err.message);
@@ -58,7 +58,7 @@ export async function register(userData) {
             throw new Error(result.error);
         }
         const result = await response.json();
-        setUserData(userData.username, result.sessionToken, result.objectId, userData['isTeam'], result.organization);
+        setUserData(userData.username, result.sessionToken, result.objectId, userData['isTeam'], result.organization, result.teamId);
     } catch (err) {
         alert(err.message);
         throw new Error(err.message);
@@ -143,6 +143,33 @@ export async function updateUser(userData) {
             alert(result.error);
             throw new Error(result.error);
         }
+    } catch (err) {
+        alert(err.message);
+        throw new Error(err.message);
+    }
+}
+
+export async function retrieveCurrentUser() {
+    try {
+        const response = await fetch(endpoint.users + sessionStorage.objectId, {
+            method: 'get',
+            headers: {
+                'X-Parse-Application-Id': appID,
+                'X-Parse-REST-API-Key': apiKey,
+                'X-Parse-Session-Token': sessionStorage.sessionToken,
+            },
+        });
+        if (response.status == 400) {
+            const result = await response.json();
+            alert(result.error);
+            throw new Error(result.error);
+        }
+        if (response.ok != true) {
+            const result = await response.json();
+            alert(result.error);
+            throw new Error(result.error);
+        }
+        return response.json();
     } catch (err) {
         alert(err.message);
         throw new Error(err.message);
