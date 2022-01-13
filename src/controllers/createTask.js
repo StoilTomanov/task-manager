@@ -23,7 +23,7 @@ export async function onCreateTask(ev) {
     }
 
     if (expectedDate[0] != '' && description.value != '') {
-        await createTask({ description: description.value, expectedOn: `${months[Number(expectedDate.value.split('-')[1])]}-${expectedDate.value.split('-')[2]}-${expectedDate.value.split('-')[0]}`, assignedOn: 'Not assigned', assignor: sessionStorage.username, status: 'Unassigned', createdOn: `${currentDate[1]}-${currentDate[2]}-${currentDate[3]}`, })
+        await createTask({ description: description.value, expectedOn: `${months[Number(expectedDate.value.split('-')[1])]}-${expectedDate.value.split('-')[2]}-${expectedDate.value.split('-')[0]}`, assignedOn: 'Not assigned', assignor: sessionStorage.username, status: 'Unassigned', createdOn: `${currentDate[1]}-${currentDate[2]}-${currentDate[3]}`, taskIdentifier: sessionStorage.teamId, })
         const msg = document.getElementById('message');
         msg.style.display = 'block';
         setTimeout(() => {
