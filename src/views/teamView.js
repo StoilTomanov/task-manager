@@ -1,18 +1,18 @@
+import { getAllUsers } from '../api/crud.js';
 import { body, main } from '../app.js';
 import { html, render } from '../lib/lit-html.js';
 import { navigationBar } from '../views/navigationView.js';
 
-export function showTeam() {
+export async function showTeam() {
 
     body.style.background = 'rgb(255, 255, 255)';
+    const teamMembers = await getAllUsers();
 
     const template = html `
     <section id="teamView">
         ${sessionStorage.sessionToken == undefined ? html `<h2>You need to <a id="sign-in" href="/signin">Login</a> or <a href="/signup"> Register</a> to access this page.</h2>`
         : html`<div id="navigation">
-                    
-                    </div>
-                    
+            </div> 
                     <div id="members">
                         <table>
                             <thead id="theader">
@@ -23,21 +23,18 @@ export function showTeam() {
                                 </tr>
                             </thead>
                             <tbody>
+                                ${teamMembers.results.map( r => html`
                                 <tr>
-                                    <td>Peter</td>
-                                    <td>JS Developer</td>
-                                    <td>8 Tasks</td>
+                                    <td>${r.username}</td>
+                                    <td>${r.jobPosition}</td>
+                                    <td>To be completed</td>
                                 </tr>
-                                <tr>
-                                    <td>Mike</td>
-                                    <td>C# Developer</td>
-                                    <td>7 Tasks</td>
-                                </tr>
+                                `)}
                             </tbody>
                             <tfoot class="totalMembers">
                                 <tr>
                                     <td colspan="3">
-                                        Total Members: 2
+                                        Total Members: ${teamMembers.results.length}
                                     </td>
                                 </tr>
                             </tfoot>

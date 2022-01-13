@@ -1,4 +1,4 @@
-import { loadModal, closeModal, onAssignTask } from '../controllers/modals.js';
+import { loadModal, closeModal, onAssignTaskForm } from '../controllers/modals.js';
 import { html } from '../lib/lit-html.js';
 
 export function showAssignTask(resultsTask, resultsUsers) {
@@ -43,13 +43,13 @@ export function showAssignTask(resultsTask, resultsUsers) {
     </table>
     <div id="assignModal" class="modal">
         <div class="modal-container">
-            <form id="modal-form" @submit=${onAssignTask}>
+            <form id="modal-form" @submit=${onAssignTaskForm}>
                 <h2>Assign task</h2>
                 <label for="assignTo">Assign to:</label>
                 <select name="emp-username" id="emp-username">
                     <option class="userList"></option>
                     ${resultsUsers.map( r => html`
-                    <option class="userList" value=${r.username}>${r.username} | <span>${r.taskCount == undefined ? '0' : r.taskCount} tasks</span></option>
+                    <option class="userList" value=${r.username}>${r.username}</option>
                     `)}
                 </select>
                 <div>

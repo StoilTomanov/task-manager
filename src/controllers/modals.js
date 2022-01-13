@@ -1,4 +1,5 @@
 import { updateTask } from "../api/tasks.js";
+import { onAssignTask } from './dashboard.js'
 let taskIdentifier;
 
 export function loadModal(ev) {
@@ -19,11 +20,13 @@ export function closeModal(ev) {
     }
 }
 
-export async function onAssignTask(ev) {
+export async function onAssignTaskForm(ev) {
     ev.preventDefault();
     const selectedMember = document.getElementById('emp-username').value;
     const currentDate = new Date().toDateString().split(' ');
     await updateTask({ assignedTo: selectedMember, status: 'Assigned', assignedOn: `${currentDate[1]}-${currentDate[2]}-${currentDate[3]}` }, taskIdentifier)
+    onAssignTask();
     closeModal();
-    //TODO: make the taskCount work
+    //TODO: consider adding a task counter in the dropdown menu in the assignModal
+    //TODO: load tasks only for the current team/company (filter by org. id)
 }
