@@ -6,7 +6,6 @@ import { showMyTasks } from '../views/myTasksView.js';
 import { showAllTasks } from '../views/allTasksView.js';
 import { getAllTasks, getCompletedTasks, getUnassignedTasks } from '../api/tasks.js';
 import { getAllUsers } from '../api/crud.js';
-import { spinner } from './spinner.js';
 
 /*
     Status: 
@@ -23,23 +22,18 @@ export function onTaskChoice(ev) {
 
     if (content == 'My tasks') {
         ev.target.style.backgroundColor = 'rgb(10, 120, 223)';
-        until(spinner(), document.getElementById('container'))
         onMyTask();
     } else if (content == 'All tasks') {
         ev.target.style.backgroundColor = 'rgb(10, 120, 223)';
-        until(spinner(), document.getElementById('container'))
         onAllTasks();
     } else if (content == 'Create task') {
         ev.target.style.backgroundColor = 'rgb(10, 120, 223)';
-        until(spinner(), document.getElementById('container'))
         onCreateTask();
     } else if (content == 'Assign task') {
         ev.target.style.backgroundColor = 'rgb(10, 120, 223)';
-        until(spinner(), document.getElementById('container'))
         onAssignTask();
     } else if (content == 'Completed tasks') {
         ev.target.style.backgroundColor = 'rgb(10, 120, 223)';
-        until(spinner(), document.getElementById('container'))
         onCompletedTasks();
     }
 
