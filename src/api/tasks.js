@@ -34,14 +34,13 @@ export async function createTask(data) {
 
 export async function getAllTasks() { // use JSONArray as the below one have an AND operator in the query
     const query = {
-        "$or": [{
-            "status": {
-                "$ne": "Completed",
-            }
-        }, ],
         "status": {
-            "$ne": "Unassigned",
-        }
+            "$nin": [
+                "Completed",
+                "Unassigned",
+            ]
+        },
+        "taskIdentifier": sessionStorage.teamId, // Check if this works - cannot use an [object Object]
     }
 
     try {
@@ -74,6 +73,9 @@ export async function getAllTasks() { // use JSONArray as the below one have an 
 export async function getCompletedTasks() {
     const query = {
         "status": "Completed",
+        "$or": [{
+            "taskIdentifier": sessionStorage.teamId, // Check if this works - cannot use an [object Object]
+        }],
     }
 
     try {
@@ -106,6 +108,9 @@ export async function getCompletedTasks() {
 export async function getUnassignedTasks() {
     const query = {
         "status": "Unassigned",
+        "$or": [{
+            "taskIdentifier": sessionStorage.teamId, // Check if this works - cannot use an [object Object]
+        }],
     }
 
     try {

@@ -18,16 +18,22 @@ import { getAllUsers } from '../api/crud.js';
 
 export function onTaskChoice(ev) {
     const content = ev.target.textContent;
+    Array.from(ev.target.parentElement.children).forEach(el => el.style.backgroundColor = 'rgb(189, 229, 255)')
 
     if (content == 'My tasks') {
+        ev.target.style.backgroundColor = 'rgb(10, 120, 223)';
         onMyTask();
     } else if (content == 'All tasks') {
+        ev.target.style.backgroundColor = 'rgb(10, 120, 223)';
         onAllTasks();
     } else if (content == 'Create task') {
+        ev.target.style.backgroundColor = 'rgb(10, 120, 223)';
         onCreateTask();
     } else if (content == 'Assign task') {
+        ev.target.style.backgroundColor = 'rgb(10, 120, 223)';
         onAssignTask();
     } else if (content == 'Completed tasks') {
+        ev.target.style.backgroundColor = 'rgb(10, 120, 223)';
         onCompletedTasks();
     }
 
