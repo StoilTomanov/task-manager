@@ -4,11 +4,13 @@ let taskIdentifier;
 
 export function loadModal(ev) {
     taskIdentifier = ev.target.dataset.id;
-    const assignModal = document.getElementById(ev.target.dataset.modaltype);
-    assignModal.style.display = 'block';
+    const modalType = document.getElementById(ev.target.dataset.modaltype);
+    modalType.style.display = 'block';
 
     if (ev.target.dataset.modaltype == 'deleteModal') {
         document.getElementById('deleteConfirm').setAttribute('data-taskId', taskIdentifier);
+    } else if (ev.target.dataset.modaltype == 'cancelModal') {
+        document.getElementById('cancelConfirm').setAttribute('data-taskId', taskIdentifier);
     }
 }
 

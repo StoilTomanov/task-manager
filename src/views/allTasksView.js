@@ -1,6 +1,9 @@
+import { onDeleteTask } from '../controllers/deleteTask.js';
+import { closeModal, loadModal } from '../controllers/modals.js';
 import { html } from '../lib/lit-html.js';
 
 export function showAllTasks(results) {
+    console.log(results);
     return html `
         ${results.length == 0 ? html`<h1 style="text-align: center">No tasks available</h1>` : html`
             <table class="table-tasks">
@@ -48,7 +51,7 @@ export function showAllTasks(results) {
                     </td>
                     <td>
                         <div class="actions">
-                            <button class="deleteBtn">Cancel</button>
+                            <button class="deleteBtn" data-id=${r.objectId} @click=${loadModal} data-modalType="cancelModal">Cancel</button>
                         </div>
                     </td>
                 </tr>
@@ -58,10 +61,10 @@ export function showAllTasks(results) {
             </table>
             <div id="cancelModal" class="modal">
                 <div class="modal-container">
-                    <h3>Are you sure you want to delete this record?</h3>
+                    <h3>Canceling will delete this record. Are you sure you want to proceed?</h3>
                     <div class="confirm">
-                        <button >Yes</button>
-                        <button data-modalType="cancelModal">No</button>
+                        <button id="cancelConfirm" data-modalType="cancelModal" @click=${onDeleteTask}>Yes</button>
+                        <button data-modalType="cancelModal" @click=${closeModal}>No</button>
                     </div>
                 </div>
             </div>

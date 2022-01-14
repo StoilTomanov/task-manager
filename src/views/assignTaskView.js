@@ -65,7 +65,7 @@ export function showAssignTask(resultsTask, resultsUsers) {
         <div class="modal-container">
             <h3>Are you sure you want to delete this record?</h3>
             <div class="confirm">
-                <button id="deleteConfirm" @click=${onDeleteTask}>Yes</button>
+                <button id="deleteConfirm" data-modalType="deleteModal" @click=${onDeleteTask}>Yes</button>
                 <button data-modalType="deleteModal" @click=${closeModal}>No</button>
             </div>
         </div>
