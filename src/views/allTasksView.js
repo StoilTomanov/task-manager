@@ -56,6 +56,15 @@ export function showAllTasks(results) {
                 )}
                 </tbody>
             </table>
+            <div id="cancelModal" class="modal">
+                <div class="modal-container">
+                    <h3>Are you sure you want to delete this record?</h3>
+                    <div class="confirm">
+                        <button >Yes</button>
+                        <button data-modalType="cancelModal">No</button>
+                    </div>
+                </div>
+            </div>
         `}
     `
         // Create pop out for the Assign button
