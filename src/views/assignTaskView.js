@@ -1,9 +1,11 @@
+import { onDeleteTask } from '../controllers/deleteTask.js';
 import { loadModal, closeModal, onAssignTaskForm } from '../controllers/modals.js';
 import { html } from '../lib/lit-html.js';
 
 export function showAssignTask(resultsTask, resultsUsers) {
+    console.log(resultsTask);
     return html `
-    ${resultsTask.length == 0 ? html`<h1 style="text-align: center">No tasks available</h1>`: html`
+    ${resultsTask.length == 0 ? html`<h1 style="text-align: center">No unassigned tasks available</h1>`: html`
     <table class="table-tasks">
         <thead id="table-head">
             <th>
@@ -33,8 +35,8 @@ export function showAssignTask(resultsTask, resultsUsers) {
                 </td>
                 <td >
                     <div class="actions">
-                        <button class="assignBtn"  data-id=${r.objectId} @click=${loadModal} data-modaltype="assignModal">Assign</button>
-                        <button class="deleteBtn" @click=${loadModal} data-modalType="deleteModal">Delete</button>
+                        <button class="assignBtn" data-id=${r.objectId} @click=${loadModal} data-modaltype="assignModal">Assign</button>
+                        <button class="deleteBtn" data-id=${r.objectId} @click=${loadModal} data-modalType="deleteModal">Delete</button>
                     </div>
                 </td>
             </tr>
@@ -63,7 +65,7 @@ export function showAssignTask(resultsTask, resultsUsers) {
         <div class="modal-container">
             <h3>Are you sure you want to delete this record?</h3>
             <div class="confirm">
-                <button>Yes</button>
+                <button id="deleteConfirm" @click=${onDeleteTask}>Yes</button>
                 <button data-modalType="deleteModal" @click=${closeModal}>No</button>
             </div>
         </div>

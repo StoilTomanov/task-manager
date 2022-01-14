@@ -156,3 +156,56 @@
     transition: 0.3s;
     cursor: pointer;
 }
+
+#cancelModal.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    transition: 0.2s;
+    opacity: 1;
+    background-color: rgba(119, 119, 119, 0.753);
+}
+
+#cancelModal .modal-container {
+    background-color: rgba(226, 226, 226, 0.911);
+    position: relative;
+    height: 40%;
+    width: 40%;
+    left: 35%;
+    top: 20%;
+    border: 3px solid rgba(8, 131, 247, 0.671);
+    border-radius: 25px;
+    box-shadow: 4px 5px 10px 7px rgb(104, 104, 104);
+    text-align: center;
+}
+
+#cancelModal button {
+    position: relative;
+    font-weight: 600;
+    top: 40px;
+    width: 17%;
+    padding: 5px;
+    margin: 10%;
+    transition: 0.3s;
+    border: 0px;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+}
+
+#cancelModal button:hover {
+    background-color: rgba(57, 119, 153, 0.678);
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#cancelModal h3 {
+    margin-top: 7%;
+    text-align: center;
+    font-size: 150%;
+}

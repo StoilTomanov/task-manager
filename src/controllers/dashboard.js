@@ -18,7 +18,8 @@ import { getAllUsers } from '../api/crud.js';
 
 export function onTaskChoice(ev) {
     const content = ev.target.textContent;
-    Array.from(ev.target.parentElement.children).forEach(el => el.style.backgroundColor = 'rgb(189, 229, 255)')
+    const tabsEl = document.querySelectorAll('[class="tab"]')
+    tabsEl.forEach(el => el.style.backgroundColor = 'rgb(189, 229, 255)')
 
     if (content == 'My tasks') {
         ev.target.style.backgroundColor = 'rgb(10, 120, 223)';

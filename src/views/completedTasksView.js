@@ -2,7 +2,7 @@ import { html } from '../lib/lit-html.js';
 
 export function showCompletedTasks(results) {
 
-    return html `${results.length == 0 ? html`<h1 style="text-align: center">No tasks available</h1>` : html`
+    return html `${results.length == 0 ? html`<h1 style="text-align: center">There are no completed tasks</h1>` : html`
     <table class="table-tasks">
         <thead id="table-head">
             <th>

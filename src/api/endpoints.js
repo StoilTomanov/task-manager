@@ -9,5 +9,6 @@ export const endpoint = {
     userQuery: host + '/users?where=',
     create: host + '/classes/Tasks',
     update: host + '/classes/Tasks/',
+    deleteTask: host + '/classes/Tasks/',
     currentUser: host + '/users/me',
 }

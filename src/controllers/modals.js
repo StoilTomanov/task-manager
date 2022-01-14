@@ -3,9 +3,13 @@ import { onAssignTask } from './dashboard.js'
 let taskIdentifier;
 
 export function loadModal(ev) {
-    taskIdentifier = ev.target.dataset.id
+    taskIdentifier = ev.target.dataset.id;
     const assignModal = document.getElementById(ev.target.dataset.modaltype);
     assignModal.style.display = 'block';
+
+    if (ev.target.dataset.modaltype == 'deleteModal') {
+        document.getElementById('deleteConfirm').setAttribute('data-taskId', taskIdentifier);
+    }
 }
 
 export function closeModal(ev) {

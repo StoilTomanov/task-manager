@@ -169,3 +169,30 @@ export async function updateTask(data, taskId) {
         throw new Error(err.message);
     }
 }
+export async function deleteTask(taskId) {
+
+    try {
+        const response = await fetch(endpoint.deleteTask + taskId, {
+            method: 'delete',
+            headers: {
+                'X-Parse-Application-Id': appID,
+                'X-Parse-REST-API-Key': apiKey,
+            },
+        });
+
+        if (response.status == 400) {
+            const result = await response.json();
+            alert(result.error);
+            throw new Error(result.error);
+        }
+        if (response.ok != true) {
+            const result = await response.json();
+            alert(result.error);
+            throw new Error(result.error);
+        }
+        // return response.json();
+    } catch (err) {
+        alert(err.message);
+        throw new Error(err.message);
+    }
+}
