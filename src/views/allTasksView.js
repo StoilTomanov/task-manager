@@ -5,7 +5,11 @@ import { html } from '../lib/lit-html.js';
 export function showAllTasks(results) {
     console.log(results);
     return html `
-        ${results.length == 0 ? html`<h1 style="text-align: center">No tasks available</h1>` : html`
+        ${results.length == 0 ? html`<h1 style="text-align: center">No tasks available</h1>
+            <div>
+                <button>Refresh</button>
+            </div>
+            ` : html`
             <table class="table-tasks">
             <thead id="table-head">
                 <div>
@@ -59,6 +63,9 @@ export function showAllTasks(results) {
                 )}
                 </tbody>
             </table>
+            <div>
+                <button>Refresh</button>
+            </div>
             <div id="cancelModal" class="modal">
                 <div class="modal-container">
                     <h3>Canceling will delete this record. Are you sure you want to proceed?</h3>

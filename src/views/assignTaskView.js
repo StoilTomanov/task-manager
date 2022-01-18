@@ -5,7 +5,11 @@ import { html } from '../lib/lit-html.js';
 export function showAssignTask(resultsTask, resultsUsers) {
     console.log(resultsTask);
     return html `
-    ${resultsTask.length == 0 ? html`<h1 style="text-align: center">No unassigned tasks available</h1>`: html`
+    ${resultsTask.length == 0 ? html`<h1 style="text-align: center">No unassigned tasks available</h1>
+    <div>
+        <button>Refresh</button>
+    </div>
+    `: html`
     <table class="table-tasks">
         <thead id="table-head">
             <th>
@@ -43,6 +47,9 @@ export function showAssignTask(resultsTask, resultsUsers) {
             `)}
         </tbody>
     </table>
+    <div>
+        <button>Refresh</button>
+    </div>
     <div id="assignModal" class="modal">
         <div class="modal-container">
             <form id="modal-form" @submit=${onAssignTaskForm}>
