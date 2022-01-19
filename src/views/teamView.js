@@ -1,5 +1,6 @@
 import { getAllUsers } from '../api/crud.js';
 import { body, main } from '../app.js';
+import { addUserMember } from '../controllers/addUser.js';
 import { html, render } from '../lib/lit-html.js';
 import { navigationBar } from '../views/navigationView.js';
 
@@ -46,6 +47,24 @@ export async function showTeam() {
                 <button class="membersBtn" id="removeMember">Remove Member</button>
             </div>
     </section>
+    <div id="addMemberModal" class="modal">
+        <div class="modal-container">
+            <form id="modal-form">
+                <h2>Add Member</h2>
+                <label for="addMember">Members:</label>
+                <select name="addMember" id="addMember" >
+                    <option class="userList"></option>
+                    ${teamMembers.results.map( r => html`
+                    <option class="userList" @click=${addUserMember}>${r.username}</option>
+                    `)}
+                </select>
+                <div>
+                    <input type="button" name="addMember" id="addMember" value="Add">
+                    <input type="button" name="cancel" id="cancel-assign" data-modalType="addMemberModal" value="Cancel">
+                </div>
+            </form>
+        </div>
+    </div>
         `
     render(template, main);
     const navigation = document.getElementById('navigation');
