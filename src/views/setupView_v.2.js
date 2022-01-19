@@ -12,11 +12,15 @@ export function showSetup() {
         <h1>Congrats! You are all set.</h1>
         <p>Your Team identifier is:</p>
         <div class="id-box">
-            <input id="next-id" type="text" readonly value="${uuid()}"><button id="copy">&#128203;</button>
+            <input id="next-id" type="text" readonly value="${uuid()}"><button id="copy" @click=${copyClipboard}>&#128203;</button>
         </div>
         <p>Share this ID with your teammates so they can join your team.</p>
         <button id="done" @click=${onDone}>Done!</button>
     </section>
         `
+}
 
+function copyClipboard() {
+    navigator.clipboard.writeText(document.getElementById('next-id').value);
+    document.getElementById('copy').textContent = 'Copied';
 }

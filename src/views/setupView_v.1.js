@@ -8,7 +8,7 @@ export function showOgrSetup() {
 
     return html `
     <section id="org-set">
-        <h1>Type your organization name (if any) so your team/teammates can find you easily.</h1>
+        <h1>Type your organization name (if any) so your ${sessionStorage.isTeam == 'true' ? html`teammates` : html`team`} can find you easily.</h1>
         <p>*Only members/teams who work with the same organization will be able to add you.</p>
         <div class="id-box">
             <input type="text" id="org-name" placeholder="Organization name...">
